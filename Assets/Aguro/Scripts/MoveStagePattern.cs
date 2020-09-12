@@ -13,7 +13,7 @@ public class MoveStagePattern : MonoBehaviour
     void Start()
     {
         stagePatternMoveSpeed = -0.05f;
-        destroyStagePointX = -10f;
+        destroyStagePointX = -36f;
     }
 
     // Update is called once per frame
