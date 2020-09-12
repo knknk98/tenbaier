@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class HighScoreText : MonoBehaviour
+public class TitleScoreText : MonoBehaviour
 {
     public Text highScoreText;          //ハイスコアを表示するText
     private int highScore;              //ハイスコア用変数
