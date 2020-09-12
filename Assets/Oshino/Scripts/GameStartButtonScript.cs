@@ -1,9 +1,9 @@
-﻿using UnityEngine.SceneManagement;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class TitleScript : MonoBehaviour
+public class GameStartButtonScript : MonoBehaviour
 {
     public void GameStart(){
         // TODO: 遷移先を本番用シーンに変える
