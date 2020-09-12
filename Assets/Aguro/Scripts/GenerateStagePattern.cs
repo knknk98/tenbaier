@@ -24,7 +24,7 @@ public class GenerateStagePattern : MonoBehaviour
         if (rightSideStagePatternObject.transform.position.x<generateStagePointX)
         {
             //Instantiate( 生成するオブジェクト,  場所, 回転 );  回転はそのままなら↓
-            rightSideStagePatternObject=Instantiate(stagePatternObjectList[0], this.transform.position, Quaternion.identity);
+            rightSideStagePatternObject=Instantiate(stagePatternObjectList[Random.Range(0, 2)], this.transform.position, Quaternion.identity);
         }
     }
 }
