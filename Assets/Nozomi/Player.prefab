@@ -104,7 +104,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &1247952040431373675
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -145,8 +145,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxJumpPower: 50
   minJumpPower: 5
-  maxCameraSize: 20
-  minCameraSize: 5
+  maxCameraSize: 30
+  minCameraSize: 15
   maxRecoverySpeed: 4
   minRecoverySpeed: 2
   maxScale: 10
