@@ -20,15 +20,20 @@ public class Player : MonoBehaviour
     [SerializeField] private float initPosX = 0;
 
 
+    private bool isAlive = true;
     private bool isMaximize = false;
     private bool isGrounded = true;
     private float jumpPower;
     private float recoverySpeed;
     private float sizeProgress;
+    
+    //画面外判定について
+    private Rect cameraRect = new Rect(0,0,1,1);
 
     private Sequence seq;
 
     private Rigidbody2D rigidbody;
+    private Renderer renderer;
 
     private void Jump()
     {
@@ -61,9 +66,16 @@ public class Player : MonoBehaviour
             sizeProgress = value;
             rigidbody.gravityScale = 1 + (maxScale - 1) * sizeProgress;
             transform.localScale = Vector3.one * (1 + (maxScale - 1) * sizeProgress);
+            recoverySpeed = minRecoverySpeed + (maxRecoverySpeed - minRecoverySpeed) * sizeProgress;
             Camera.main.orthographicSize = minCameraSize + (maxCameraSize - minCameraSize) * sizeProgress;
             jumpPower = minJumpPower + (maxJumpPower - minJumpPower) * sizeProgress;
         }));
+    }
+    
+    private void GameOver()
+    {
+        isAlive = false;
+        Debug.Log("DIE...");
     }
     
 
@@ -74,34 +86,45 @@ public class Player : MonoBehaviour
         jumpPower = minJumpPower + (maxJumpPower - minJumpPower) * sizeProgress;
         Camera.main.orthographicSize = minCameraSize + (maxCameraSize - minCameraSize) * sizeProgress;
         rigidbody = GetComponent<Rigidbody2D>();
+        renderer = GetComponent<Renderer>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (isGrounded)
+        if (isAlive)
         {
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (isGrounded)
             {
-                Jump();
+                if (Input.GetKeyDown(KeyCode.Space))
+                {
+                    Jump();
+                }
             }
-        }
 
-        if (Input.GetKeyDown(KeyCode.M))
-        {
-            if (isMaximize)
+            if (Input.GetKeyDown(KeyCode.M))
             {
-                Minimize();
+                if (isMaximize)
+                {
+                    Minimize();
+                }
+                else
+                {
+                    Maximize();
+                }
             }
-            else
-            {
-                Maximize();
-            }
-        }
 
-        if (initPosX - transform.position.x > 0)
-        {
-            rigidbody.MovePosition(transform.position + Vector3.right * Time.deltaTime * recoverySpeed);
+            if (initPosX - transform.position.x > 0)
+            {
+                transform.position += recoverySpeed * Time.deltaTime * Vector3.right;
+            }
+
+            //画面外判定
+            var viewportPos = Camera.main.WorldToViewportPoint(transform.position);
+            if (!cameraRect.Contains(viewportPos))
+            {
+                GameOver();
+            }
         }
     }
 
