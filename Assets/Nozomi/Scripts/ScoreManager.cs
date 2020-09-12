@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
 public class ScoreManager : MonoBehaviour
 {
@@ -15,13 +16,13 @@ public class ScoreManager : MonoBehaviour
     
     private static ScoreManager singletonInstance;
 
-    public static ScoreManager SinngletonInstance
+    public static ScoreManager SingletonInstance
     {
         get
         {
             if (singletonInstance == null)
             {
-                var obj = new GameObject("Scoremanager");
+                var obj = new GameObject("ScoreManager");
                 DontDestroyOnLoad(obj);
                 singletonInstance = obj.AddComponent<ScoreManager>();
             }
@@ -43,8 +44,10 @@ public class ScoreManager : MonoBehaviour
         itemDictionary[itemID] = item;
     }
 
-    public Dictionary<int, ItemInfo> GetItemCountDictionary()
+    public List<ItemInfo> GetItemList()
     {
-        return itemDictionary;
+        var itemList = itemDictionary.Values.OrderBy(v => v.price).ToList();
+        return itemList;
     }
+    
 }

@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -89,7 +90,12 @@ public class Player : MonoBehaviour
     private void GameOver()
     {
         isAlive = false;
-        Debug.Log("DIE...");
+        
+    }
+
+    private void GoToResultScene()
+    {
+        SceneManager.LoadScene("ResultScene");
     }
     
 
