@@ -147,8 +147,8 @@ MonoBehaviour:
   minJumpPower: 5
   maxCameraSize: 30
   minCameraSize: 15
-  maxRecoverySpeed: 4
-  minRecoverySpeed: 2
+  maxRecoveryPower: 1
+  minRecoveryPower: 1
   maxScale: 10
   transitionTime: 2
   initPosX: 0

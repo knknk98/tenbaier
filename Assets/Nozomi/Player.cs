@@ -66,6 +66,7 @@ public class Player : MonoBehaviour
             sizeProgress = value;
             rigidbody.gravityScale = 1 + (maxScale - 1) * sizeProgress;
             transform.localScale = Vector3.one * (1 + (maxScale - 1) * sizeProgress);
+            recoverySpeed = minRecoverySpeed + (maxRecoverySpeed - minRecoverySpeed) * sizeProgress;
             Camera.main.orthographicSize = minCameraSize + (maxCameraSize - minCameraSize) * sizeProgress;
             jumpPower = minJumpPower + (maxJumpPower - minJumpPower) * sizeProgress;
         }));
@@ -115,7 +116,7 @@ public class Player : MonoBehaviour
 
             if (initPosX - transform.position.x > 0)
             {
-                rigidbody.MovePosition(transform.position + Vector3.right * Time.deltaTime * recoverySpeed);
+                transform.position += recoverySpeed * Time.deltaTime * Vector3.right;
             }
 
             //画面外判定
