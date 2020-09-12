@@ -28,9 +28,11 @@ public class GenerateStageAndBackground : MonoBehaviour
     [SerializeField] bool isGameOver;
 
     //マイナスの値で左に移動
-    //本当はstaticにしないほうが良いと思います…
     //MoveStagePattern.csとMoveBackgroundでステージ全体の移動速度を利用しています
-    public static float stagePatternMoveSpeed;
+    public float stagePatternMoveSpeed;
+
+    //小人と巨人の速度変更
+    public float speedRate;
 
     // Start is called before the first frame update
     void Start()
@@ -53,12 +55,15 @@ public class GenerateStageAndBackground : MonoBehaviour
             stagePatternMoveSpeed += stageSpeedAcceleration;
         }
 
-        if (rightSideStagePatternObject.transform.position.x<generateStagePointX)
+        //ステージパターンの繋ぎ目の隙間防止
+        float offset = stagePatternMoveSpeed * speedRate;
+
+        if (rightSideStagePatternObject.transform.position.x<generateStagePointX - offset)
         {
             rightSideStagePatternObject=Instantiate(stagePatternObjectList[Random.Range(0, stagePatternObjectList.Count)], new Vector3(28.9f, -5.0f, 0.0f), Quaternion.identity);
         }
 
-        if (rightSideBackgroundObject.transform.position.x < generateBackgroundPointX)
+        if (rightSideBackgroundObject.transform.position.x < generateBackgroundPointX - offset/4f)
         {
             rightSideBackgroundObject = Instantiate(backgroundObject, new Vector3(33.0f,0.0f,0.0f), Quaternion.identity);
         }
@@ -68,5 +73,10 @@ public class GenerateStageAndBackground : MonoBehaviour
     {
         stagePatternMoveSpeed = 0.0f;
         isGameOver = true;
+    }
+
+    public void SetSpeedRate(float rate)
+    {
+        speedRate = rate;
     }
 }

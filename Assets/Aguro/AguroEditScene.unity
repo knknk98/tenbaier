@@ -671,6 +671,8 @@ MonoBehaviour:
   stageSpeedMax: -0.5
   initialStageSpeed: -0.05
   isGameOver: 0
+  stagePatternMoveSpeed: 0
+  speedRate: 1
 --- !u!4 &1873928418
 Transform:
   m_ObjectHideFlags: 0
