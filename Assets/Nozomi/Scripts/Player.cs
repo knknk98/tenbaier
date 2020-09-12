@@ -15,6 +15,9 @@ public class Player : MonoBehaviour
     [SerializeField] private float maxRecoverySpeed;
     [SerializeField] private float minRecoverySpeed;
     
+    [SerializeField] private float maxGravityScale;
+    [SerializeField] private float minGravityScale;
+    
     [SerializeField] private float maxScale = 10f;
     [SerializeField] private float transitionTime;
     [SerializeField] private float initPosX = 0;
@@ -22,7 +25,6 @@ public class Player : MonoBehaviour
 
     private bool isAlive = true;
     private bool isMaximize = false;
-    private bool isGrounded = true;
     private float jumpPower;
     private float recoverySpeed;
     private float sizeProgress;
@@ -37,10 +39,10 @@ public class Player : MonoBehaviour
 
     private void Jump()
     {
-        if (!isGrounded) return;
-
-        isGrounded = false;
-        rigidbody.AddForce(jumpPower * Vector2.up, ForceMode2D.Impulse);
+        if(TouchLayer("Ground", Vector2.down))
+        {
+            rigidbody.AddForce(jumpPower * Vector2.up, ForceMode2D.Impulse);
+        }
     }
 
     private void Maximize()
@@ -55,6 +57,18 @@ public class Player : MonoBehaviour
         isMaximize = false;
     }
 
+    private bool TouchLayer(string layerName, Vector2 direction, float margin = 0.1f)
+    {
+        int layerNo = LayerMask.NameToLayer(layerName);
+        int layerMask = 1 << layerNo;
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, direction, transform.localScale.x * 0.5f + margin, layerMask);
+        if (hit.collider)
+        {
+            return true;
+        }
+
+        return false;
+    }
     private void ChangeSize(float target)
     {
         if (seq != null)
@@ -64,7 +78,7 @@ public class Player : MonoBehaviour
         seq = DOTween.Sequence().Append(DOVirtual.Float(sizeProgress, target, transitionTime, value =>
         {
             sizeProgress = value;
-            rigidbody.gravityScale = 1 + (maxScale - 1) * sizeProgress;
+            rigidbody.gravityScale = minGravityScale + (maxGravityScale - minGravityScale) * sizeProgress;
             transform.localScale = Vector3.one * (1 + (maxScale - 1) * sizeProgress);
             recoverySpeed = minRecoverySpeed + (maxRecoverySpeed - minRecoverySpeed) * sizeProgress;
             Camera.main.orthographicSize = minCameraSize + (maxCameraSize - minCameraSize) * sizeProgress;
@@ -81,12 +95,14 @@ public class Player : MonoBehaviour
 
     private void Awake()
     {
+        rigidbody = GetComponent<Rigidbody2D>();
+        renderer = GetComponent<Renderer>();
+        
         sizeProgress = isMaximize ? 1 : 0;
         recoverySpeed = minRecoverySpeed + (maxRecoverySpeed - minRecoverySpeed) * sizeProgress;
         jumpPower = minJumpPower + (maxJumpPower - minJumpPower) * sizeProgress;
         Camera.main.orthographicSize = minCameraSize + (maxCameraSize - minCameraSize) * sizeProgress;
-        rigidbody = GetComponent<Rigidbody2D>();
-        renderer = GetComponent<Renderer>();
+        rigidbody.gravityScale = minGravityScale + (maxGravityScale - minGravityScale) * sizeProgress;
     }
 
     // Update is called once per frame
@@ -94,14 +110,12 @@ public class Player : MonoBehaviour
     {
         if (isAlive)
         {
-            if (isGrounded)
+            
+            if (Input.GetKeyDown(KeyCode.Space))
             {
-                if (Input.GetKeyDown(KeyCode.Space))
-                {
-                    Jump();
-                }
+                Jump();
             }
-
+            
             if (Input.GetKeyDown(KeyCode.M))
             {
                 if (isMaximize)
@@ -114,10 +128,18 @@ public class Player : MonoBehaviour
                 }
             }
 
-            if (initPosX - transform.position.x > 0)
+            if (!TouchLayer("Ground", Vector2.right, 0.3f))
             {
-                transform.position += recoverySpeed * Time.deltaTime * Vector3.right;
+                var velocity = rigidbody.velocity;
+                velocity.x = Mathf.Max(0, velocity.x);
+                rigidbody.velocity = velocity;
+
+                if (initPosX - transform.position.x > 0)
+                {
+                    transform.position += recoverySpeed * Time.deltaTime * Vector3.right;
+                }
             }
+            
 
             //画面外判定
             var viewportPos = Camera.main.WorldToViewportPoint(transform.position);
@@ -127,13 +149,5 @@ public class Player : MonoBehaviour
             }
         }
     }
-
-    private void OnCollisionEnter2D(Collision2D other)
-    {
-        string layerName = LayerMask.LayerToName(other.gameObject.layer);
-        if (layerName == "Ground")
-        {
-            isGrounded = true;
-        }
-    }
+    
 }

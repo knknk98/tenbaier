@@ -12,4 +12,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9e141f088324414fbe46242d1597733, type: 3}
   m_Name: ItemScriptableObject
   m_EditorClassIdentifier: 
-  ItemDataList: []
+  ItemDataList:
+  - thumbnail: {fileID: 0}
+    name: 
+    price: 0
+  - thumbnail: {fileID: 0}
+    name: 
+    price: 0
+  - thumbnail: {fileID: 0}
+    name: 
+    price: 0
+  - thumbnail: {fileID: 0}
+    name: 
+    price: 0
+  - thumbnail: {fileID: 0}
+    name: 
+    price: 0
+  - thumbnail: {fileID: 0}
+    name: 
+    price: 0
+  - thumbnail: {fileID: 0}
+    name: 
+    price: 0
+  - thumbnail: {fileID: 0}
+    name: 
+    price: 0
+  - thumbnail: {fileID: 0}
+    name: 
+    price: 0
+  - thumbnail: {fileID: 0}
+    name: 
+    price: 0
