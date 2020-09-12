@@ -7,6 +7,8 @@ using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
+    [SerializeField] private GameObject gameOverText;
+    
     [SerializeField] private float maxJumpPower;
     [SerializeField] private float minJumpPower;
     
@@ -18,6 +20,9 @@ public class Player : MonoBehaviour
     
     [SerializeField] private float maxGravityScale;
     [SerializeField] private float minGravityScale;
+
+    [SerializeField] private Vector3 maxCameraPos;
+    [SerializeField] private Vector3 minCameraPos;
     
     [SerializeField] private float maxScale = 10f;
     [SerializeField] private float transitionTime;
@@ -31,7 +36,7 @@ public class Player : MonoBehaviour
     private float sizeProgress;
     
     //画面外判定について
-    private Rect cameraRect = new Rect(0,0,1,1);
+    private Rect cameraRect = new Rect(-0.1f,-0.1f,1.1f,2f);
 
     private Sequence seq;
 
@@ -84,13 +89,16 @@ public class Player : MonoBehaviour
             recoverySpeed = minRecoverySpeed + (maxRecoverySpeed - minRecoverySpeed) * sizeProgress;
             Camera.main.orthographicSize = minCameraSize + (maxCameraSize - minCameraSize) * sizeProgress;
             jumpPower = minJumpPower + (maxJumpPower - minJumpPower) * sizeProgress;
+
+            Camera.main.transform.position = Vector3.Lerp(minCameraPos, maxCameraPos, sizeProgress);
         }));
     }
     
     private void GameOver()
     {
         isAlive = false;
-        
+        Instantiate(gameOverText);
+        Invoke("GoToResultScene", 3f);
     }
 
     private void GoToResultScene()
@@ -109,6 +117,7 @@ public class Player : MonoBehaviour
         jumpPower = minJumpPower + (maxJumpPower - minJumpPower) * sizeProgress;
         Camera.main.orthographicSize = minCameraSize + (maxCameraSize - minCameraSize) * sizeProgress;
         rigidbody.gravityScale = minGravityScale + (maxGravityScale - minGravityScale) * sizeProgress;
+        Camera.main.transform.position = Vector3.Lerp(minCameraPos, maxCameraPos, sizeProgress);
     }
 
     // Update is called once per frame
@@ -137,7 +146,7 @@ public class Player : MonoBehaviour
             if (!TouchLayer("Ground", Vector2.right, 0.3f))
             {
                 var velocity = rigidbody.velocity;
-                velocity.x = Mathf.Max(0, velocity.x);
+                velocity.x = 0;
                 rigidbody.velocity = velocity;
 
                 if (initPosX - transform.position.x > 0)
