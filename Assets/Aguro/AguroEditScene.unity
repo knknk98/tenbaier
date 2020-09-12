@@ -583,6 +583,10 @@ MonoBehaviour:
   - {fileID: 3698390351867785422, guid: e8d2729c9b082443e85170f750cb3df1, type: 3}
   generateStagePointX: 19
   rightSideStagePatternObject: {fileID: 2003716345}
+  stageSpeedAcceleration: -0.00007
+  stageSpeedMax: -0.5
+  initialStageSpeed: -0.05
+  isGameOver: 0
 --- !u!4 &1873928418
 Transform:
   m_ObjectHideFlags: 0
