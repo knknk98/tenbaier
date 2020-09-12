@@ -661,6 +661,7 @@ MonoBehaviour:
   stagePatternObjectList:
   - {fileID: 8225138190845969390, guid: f11752c7ae8394aa39dbeeafba384c36, type: 3}
   - {fileID: 3698390351867785422, guid: e8d2729c9b082443e85170f750cb3df1, type: 3}
+  - {fileID: 3698390351867785422, guid: bc1a9a14c01ff4194bc47021e84488d8, type: 3}
   rightSideStagePatternObject: {fileID: 2003716345}
   backgroundObject: {fileID: 5663232148710905018, guid: a03fd5be1dcd54a49a018d3bcbb4f81f,
     type: 3}
@@ -670,6 +671,8 @@ MonoBehaviour:
   stageSpeedMax: -0.5
   initialStageSpeed: -0.05
   isGameOver: 0
+  stagePatternMoveSpeed: 0
+  speedRate: 1
 --- !u!4 &1873928418
 Transform:
   m_ObjectHideFlags: 0
