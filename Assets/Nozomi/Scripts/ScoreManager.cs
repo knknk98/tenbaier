@@ -13,7 +13,10 @@ public class ScoreManager : MonoBehaviour
         public int count;
     }
     private Dictionary<int, ItemInfo> itemDictionary = new Dictionary<int, ItemInfo>();
-    
+
+    private int totalScore = 0;
+    private int highScore = 0;
+
     private static ScoreManager singletonInstance;
 
     public static ScoreManager SingletonInstance
@@ -42,12 +45,31 @@ public class ScoreManager : MonoBehaviour
         var item = itemDictionary[itemID];
         item.count += itemCount;
         itemDictionary[itemID] = item;
+
+        totalScore += item.price;
+        PlayerPrefs.SetInt("Score", totalScore);
+        if (totalScore > highScore)
+        {
+            highScore = totalScore;
+            PlayerPrefs.SetInt("HighScore", highScore);
+        }
     }
 
     public List<ItemInfo> GetItemList()
     {
         var itemList = itemDictionary.Values.OrderBy(v => v.price).ToList();
         return itemList;
+    }
+
+    public void InitScore()
+    {
+        totalScore = 0;
+        highScore = 0;
+        if (PlayerPrefs.HasKey("HighScore"))
+        {
+            highScore = PlayerPrefs.GetInt("HighScore");
+        }
+        
     }
     
 }
