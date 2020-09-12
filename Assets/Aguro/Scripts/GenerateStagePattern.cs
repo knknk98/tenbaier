@@ -5,6 +5,12 @@ using UnityEngine;
 public class GenerateStagePattern : MonoBehaviour
 {
     [SerializeField] List<GameObject> stagePatternObjectList = new List<GameObject>();
+    [SerializeField] float generateStagePointX;
+
+    //一番右にあるステージオブジェクトを保存するために必要
+    //Inspector上で右端のステージオブジェクトを代入する必要があります。
+    [SerializeField] private GameObject rightSideStagePatternObject;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -14,10 +20,11 @@ public class GenerateStagePattern : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+
+        if (rightSideStagePatternObject.transform.position.x<generateStagePointX)
         {
             //Instantiate( 生成するオブジェクト,  場所, 回転 );  回転はそのままなら↓
-            //Instantiate(target, new Vector3(1.0f, 2.0f, 0.0f), Quaternion.identity);
+            rightSideStagePatternObject=Instantiate(stagePatternObjectList[Random.Range(0, 2)], this.transform.position, Quaternion.identity);
         }
     }
 }
