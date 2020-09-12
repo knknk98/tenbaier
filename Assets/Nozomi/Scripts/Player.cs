@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
+    [SerializeField] private InputUI inputUI;
     [SerializeField] private GameObject gameOverText;
     
     [SerializeField] private float maxJumpPower;
@@ -55,12 +56,14 @@ public class Player : MonoBehaviour
     {
         ChangeSize(1);
         isMaximize = true;
+        inputUI.Swap(isMaximize);
     }
 
     private void Minimize()
     {
         ChangeSize(0);
         isMaximize = false;
+        inputUI.Swap(isMaximize);
     }
 
     private bool TouchLayer(string layerName, Vector2 direction, float margin = 0.1f)
