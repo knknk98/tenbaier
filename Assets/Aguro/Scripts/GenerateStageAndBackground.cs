@@ -55,7 +55,7 @@ public class GenerateStageAndBackground : MonoBehaviour
 
         if (rightSideStagePatternObject.transform.position.x<generateStagePointX)
         {
-            rightSideStagePatternObject=Instantiate(stagePatternObjectList[Random.Range(0, 2)], new Vector3(28.9f, -5.0f, 0.0f), Quaternion.identity);
+            rightSideStagePatternObject=Instantiate(stagePatternObjectList[Random.Range(0, stagePatternObjectList.Count)], new Vector3(28.9f, -5.0f, 0.0f), Quaternion.identity);
         }
 
         if (rightSideBackgroundObject.transform.position.x < generateBackgroundPointX)
