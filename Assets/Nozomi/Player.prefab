@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 6932225878885090689}
   - component: {fileID: 6820447572665256567}
   - component: {fileID: 1739337651654724520}
-  - component: {fileID: 1247952040431373675}
   - component: {fileID: 5796230583859380844}
+  - component: {fileID: -5439631463266637863}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -100,37 +100,11 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 70028953ee98d4423afe5a148e23391c, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!61 &1247952040431373675
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8376665162854277719}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
 --- !u!114 &5796230583859380844
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -143,12 +117,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e686d5253a1b4534886f7b4937d057f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxJumpPower: 50
-  minJumpPower: 5
+  maxJumpPower: 100
+  minJumpPower: 10
   maxCameraSize: 30
   minCameraSize: 15
-  maxRecoveryPower: 1
-  minRecoveryPower: 1
+  maxRecoverySpeed: 10
+  minRecoverySpeed: 2
   maxScale: 10
   transitionTime: 2
   initPosX: 0
+--- !u!58 &-5439631463266637863
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8376665162854277719}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
