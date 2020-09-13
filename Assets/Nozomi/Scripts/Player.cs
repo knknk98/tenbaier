@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
+    [SerializeField] private GenerateStageAndBackground gsab;
     [SerializeField] private InputUI inputUI;
     [SerializeField] private GameObject gameOverText;
     
@@ -24,6 +25,9 @@ public class Player : MonoBehaviour
 
     [SerializeField] private Vector3 maxCameraPos;
     [SerializeField] private Vector3 minCameraPos;
+
+    [SerializeField] private float maxSpeedRate;
+    [SerializeField] private float minSpeedRate;
     
     [SerializeField] private float maxScale = 10f;
     [SerializeField] private float transitionTime;
@@ -32,9 +36,12 @@ public class Player : MonoBehaviour
 
     private bool isAlive = true;
     private bool isMaximize = false;
+    private bool isInChange = false;
     private float jumpPower;
     private float recoverySpeed;
+    private float speedRate;
     private float sizeProgress;
+    
     
     //画面外判定について
     private Rect cameraRect = new Rect(-0.1f,-0.1f,1.1f,2f);
@@ -54,6 +61,7 @@ public class Player : MonoBehaviour
 
     private void Maximize()
     {
+        isInChange = true;
         ChangeSize(1);
         isMaximize = true;
         inputUI.Swap(isMaximize);
@@ -61,6 +69,7 @@ public class Player : MonoBehaviour
 
     private void Minimize()
     {
+        isInChange = true;
         ChangeSize(0);
         isMaximize = false;
         inputUI.Swap(isMaximize);
@@ -87,6 +96,8 @@ public class Player : MonoBehaviour
         seq = DOTween.Sequence().Append(DOVirtual.Float(sizeProgress, target, transitionTime, value =>
         {
             sizeProgress = value;
+            speedRate = minSpeedRate + (maxSpeedRate - minSpeedRate) * sizeProgress;
+            gsab.SetSpeedRate(speedRate);
             rigidbody.gravityScale = minGravityScale + (maxGravityScale - minGravityScale) * sizeProgress;
             transform.localScale = Vector3.one * (1 + (maxScale - 1) * sizeProgress);
             recoverySpeed = minRecoverySpeed + (maxRecoverySpeed - minRecoverySpeed) * sizeProgress;
@@ -94,11 +105,17 @@ public class Player : MonoBehaviour
             jumpPower = minJumpPower + (maxJumpPower - minJumpPower) * sizeProgress;
 
             Camera.main.transform.position = Vector3.Lerp(minCameraPos, maxCameraPos, sizeProgress);
-        }));
+        })).OnComplete(() => { isInChange = false;});
     }
     
     private void GameOver()
     {
+        if (!isAlive) return;
+
+        if (seq != null)
+        {
+            seq.Kill();
+        }
         isAlive = false;
         Instantiate(gameOverText);
         Invoke("GoToResultScene", 3f);
@@ -116,6 +133,8 @@ public class Player : MonoBehaviour
         renderer = GetComponent<Renderer>();
         
         sizeProgress = isMaximize ? 1 : 0;
+        speedRate = minSpeedRate + (maxSpeedRate - minSpeedRate) * sizeProgress;
+        gsab.SetSpeedRate(speedRate);
         recoverySpeed = minRecoverySpeed + (maxRecoverySpeed - minRecoverySpeed) * sizeProgress;
         jumpPower = minJumpPower + (maxJumpPower - minJumpPower) * sizeProgress;
         Camera.main.orthographicSize = minCameraSize + (maxCameraSize - minCameraSize) * sizeProgress;
@@ -155,6 +174,14 @@ public class Player : MonoBehaviour
                 if (initPosX - transform.position.x > 0)
                 {
                     transform.position += recoverySpeed * Time.deltaTime * Vector3.right;
+                }
+            }
+
+            if (isMaximize && isInChange)
+            {
+                if (TouchLayer("Ground", Vector2.up, 0.3f))
+                {
+                    Minimize();
                 }
             }
             
