@@ -69,7 +69,7 @@ public class ScoreManager : MonoBehaviour
         {
             highScore = PlayerPrefs.GetInt("HighScore");
         }
-        
+
     }
-    
+
 }
