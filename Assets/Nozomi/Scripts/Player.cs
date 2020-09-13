@@ -67,12 +67,14 @@ public class Player : MonoBehaviour
             var vel = rigidbody.velocity;
             vel.y = 0;
             rigidbody.velocity = vel;
+            SoundManager.SingletonInstance.PlaySE("jump", false, 0.3f);
             rigidbody.AddForce(jumpPower * Vector2.up, ForceMode2D.Impulse);
         }
     }
 
     private void Maximize()
     {
+        SoundManager.SingletonInstance.PlaySE("nobiru", false, 0.3f);
         isInChange = true;
         ChangeSize(1);
         isMaximize = true;
@@ -81,6 +83,7 @@ public class Player : MonoBehaviour
 
     private void Minimize()
     {
+        SoundManager.SingletonInstance.PlaySE("tidimu", false, 0.3f);
         isInChange = true;
         ChangeSize(0);
         isMaximize = false;
@@ -122,6 +125,7 @@ public class Player : MonoBehaviour
     
     private void GameOver()
     {
+        SoundManager.SingletonInstance.PlaySE("gameover", false, 0.3f);
         gsab.SetSpeedRate(0);
         if (!isAlive) return;
 
@@ -155,6 +159,11 @@ public class Player : MonoBehaviour
         Camera.main.orthographicSize = minCameraSize + (maxCameraSize - minCameraSize) * sizeProgress;
         rigidbody.gravityScale = minGravityScale + (maxGravityScale - minGravityScale) * sizeProgress;
         Camera.main.transform.position = Vector3.Lerp(minCameraPos, maxCameraPos, sizeProgress);
+    }
+
+    private void Start()
+    {
+        SoundManager.SingletonInstance.PlayBGM("playBGM", false, 0.3f);
     }
 
     // Update is called once per frame
