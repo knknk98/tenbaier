@@ -56,6 +56,14 @@ MonoBehaviour:
   - {fileID: 8225138190845969390, guid: 1c5c71dac076e495b93add13fadf989e, type: 3}
   - {fileID: 8225138190845969390, guid: 02830f4bb5e234fe6a18f7f7f749ab16, type: 3}
   - {fileID: 8225138190845969390, guid: c94a46410791d4d1bb46f2b0df393497, type: 3}
+  - {fileID: 8225138190845969390, guid: 76d9db099331b4aca947335db178fc96, type: 3}
+  - {fileID: 8225138190845969390, guid: 6ca6edf14e7454a39807ee729849e2a1, type: 3}
+  - {fileID: 3698390351867785422, guid: 77f6cfb84e20c4dbc90a18b38f19d874, type: 3}
+  - {fileID: 3698390351867785422, guid: 57c574436b63640d79055c90a94e6aa6, type: 3}
+  - {fileID: 3698390351867785422, guid: 487caa4cba99744b8a07a1f6472aaeca, type: 3}
+  - {fileID: 3698390351867785422, guid: 7ee96498f31534cf4bd2db78b39850b7, type: 3}
+  - {fileID: 8225138190845969390, guid: 0bc9fddb88821407fb77bb547f9a5abe, type: 3}
+  - {fileID: 8225138190845969390, guid: 6f66544af4f7c439f91380e74818bef9, type: 3}
   rightSideStagePatternObject: {fileID: 0}
   backgroundObject: {fileID: 5663232148710905018, guid: a03fd5be1dcd54a49a018d3bcbb4f81f,
     type: 3}
