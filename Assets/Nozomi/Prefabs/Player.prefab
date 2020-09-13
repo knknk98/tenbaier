@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6820447572665256567}
   - component: {fileID: 1739337651654724520}
   - component: {fileID: 5796230583859380844}
-  - component: {fileID: 50538928501598461}
+  - component: {fileID: 8229209745123240086}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -139,8 +139,8 @@ MonoBehaviour:
   maxShotPower: 100
   minShotPower: 10
   rotPower: 30
---- !u!58 &50538928501598461
-CircleCollider2D:
+--- !u!70 &8229209745123240086
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -153,5 +153,5 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.5
+  m_Size: {x: 0.5, y: 1}
+  m_Direction: 0

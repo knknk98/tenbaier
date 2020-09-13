@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ItemDataList:
   - thumbnail: {fileID: 21300000, guid: b705466a4541bcd469cc22e0c76d2df7, type: 3}
-    name: Nintendo Switch
+    name: "\u30B2\u30FC\u30E0\u6A5F"
     price: 420000
   - thumbnail: {fileID: 21300000, guid: 3c61b9b087618544f8666928e35012aa, type: 3}
     name: "\u507D\u30D6\u30E9\u30F3\u30C9\u30D0\u30C3\u30B0"
