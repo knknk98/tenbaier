@@ -39,6 +39,7 @@ public class Player : MonoBehaviour
 
 
     private bool isAlive = true;
+    private bool isMax = false;
     private bool isMaximize = false;
     private bool isInChange = false;
     private float jumpPower;
@@ -119,6 +120,20 @@ public class Player : MonoBehaviour
         }
         seq = DOTween.Sequence().Append(DOVirtual.Float(sizeProgress, target, transitionTime, value =>
         {
+            if (target > 0.5f)
+            {
+                if (value > 0.5f)
+                {
+                    isMax = true;
+                }
+            }
+            else
+            {
+                if (value < 0.5f)
+                {
+                    isMax = false;
+                }
+            }
             sizeProgress = value;
             speedRate = minSpeedRate + (maxSpeedRate - minSpeedRate) * sizeProgress;
             gsab.SetSpeedRate(speedRate);
@@ -128,14 +143,24 @@ public class Player : MonoBehaviour
             Camera.main.orthographicSize = minCameraSize + (maxCameraSize - minCameraSize) * sizeProgress;
             jumpPower = minJumpPower + (maxJumpPower - minJumpPower) * sizeProgress;
             shotPower = minShotPower + (maxShotPower - minShotPower) * sizeProgress;
-
             cameraBasePos = Vector3.Lerp(minCameraPos, maxCameraPos, sizeProgress);
         })).OnComplete(() => { isInChange = false;});
     }
     
     private void GameOver()
     {
+        /*
+        var itemList = ScoreManager.SingletonInstance.GetItemList();
+        foreach (var item in itemList)
+        {
+            Debug.Log("name:" + item.name);
+            Debug.Log("price:" + item.price);
+            Debug.Log("count:" + item.count);
+        }
+        */
+        
         Die(gameObject, new Vector2(-0.41f, 0.41f), shotPower, rotPower, false);
+        SoundManager.SingletonInstance.StopBGM();
         SoundManager.SingletonInstance.PlaySE("gameover", false, 0.3f);
         gsab.SetSpeedRate(0);
         if (!isAlive) return;
@@ -282,7 +307,7 @@ public class Player : MonoBehaviour
                 break;
             
             case "Clerk":
-                if (isMaximize)
+                if (isMax)
                 {
                     SoundManager.SingletonInstance.PlaySE("damage", false, 0.3f);
                     Die(other.gameObject, new Vector2(0.5f,0.5f), minShotPower,-rotPower, true);
@@ -295,15 +320,23 @@ public class Player : MonoBehaviour
 
                 break;
             
-            case "Grass":
-                if (isMaximize)
-                {
-                    Destroy(other.gameObject);
-                }
-
+            default:
                 break;
-                
+
         }
   
+    }
+
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        string layerName = LayerMask.LayerToName(other.gameObject.layer);
+        if (layerName == "Grass")
+        {
+            if (isMax)
+            {
+                SoundManager.SingletonInstance.PlaySE("grass", false, 0.3f);
+                Destroy(other.gameObject);
+            }
+        }
     }
 }
