@@ -117,19 +117,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e686d5253a1b4534886f7b4937d057f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inputUI: {fileID: 0}
+  gsab: {fileID: 0}
+  inputUI: {fileID: 8774759169431928440, guid: 244539b0edd844d8d8924ac82c853ed8, type: 3}
   gameOverText: {fileID: 7890105815159102423, guid: 9a88037db4f8c40fe9b6573a28bf4b0a,
     type: 3}
   maxJumpPower: 100
   minJumpPower: 15
   maxCameraSize: 15
   minCameraSize: 5
-  maxRecoverySpeed: 6
+  maxRecoverySpeed: 4
   minRecoverySpeed: 2
   maxGravityScale: 30
   minGravityScale: 5
   maxCameraPos: {x: 0, y: 0, z: -10}
   minCameraPos: {x: 0, y: -10, z: -10}
+  maxSpeedRate: 3
+  minSpeedRate: 1
   maxScale: 10
   transitionTime: 2
   initPosX: 0
