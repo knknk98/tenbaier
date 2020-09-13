@@ -71,6 +71,11 @@ public class Player : MonoBehaviour
             jumpCount = MaxJumpCount;
         }
 
+        if (TouchLayer("Grass", Vector2.down) && !isMax)
+        {
+            jumpCount = MaxJumpCount;
+        }
+
         if (jumpCount > 0)
         {
             jumpCount--;
