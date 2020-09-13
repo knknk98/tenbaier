@@ -41,6 +41,9 @@ public class Player : MonoBehaviour
     private float recoverySpeed;
     private float speedRate;
     private float sizeProgress;
+
+    private int jumpCount;
+    private const int MaxJumpCount = 2;
     
     
     //画面外判定について
@@ -55,6 +58,15 @@ public class Player : MonoBehaviour
     {
         if(TouchLayer("Ground", Vector2.down))
         {
+            jumpCount = MaxJumpCount;
+        }
+
+        if (jumpCount > 0)
+        {
+            jumpCount--;
+            var vel = rigidbody.velocity;
+            vel.y = 0;
+            rigidbody.velocity = vel;
             rigidbody.AddForce(jumpPower * Vector2.up, ForceMode2D.Impulse);
         }
     }
@@ -110,6 +122,7 @@ public class Player : MonoBehaviour
     
     private void GameOver()
     {
+        gsab.SetSpeedRate(0);
         if (!isAlive) return;
 
         if (seq != null)
@@ -131,6 +144,8 @@ public class Player : MonoBehaviour
     {
         rigidbody = GetComponent<Rigidbody2D>();
         renderer = GetComponent<Renderer>();
+
+        jumpCount = MaxJumpCount;
         
         sizeProgress = isMaximize ? 1 : 0;
         speedRate = minSpeedRate + (maxSpeedRate - minSpeedRate) * sizeProgress;
