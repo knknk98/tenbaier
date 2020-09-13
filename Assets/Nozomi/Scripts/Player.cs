@@ -164,6 +164,7 @@ public class Player : MonoBehaviour
     private void Start()
     {
         SoundManager.SingletonInstance.PlayBGM("playBGM", false, 0.3f);
+        ScoreManager.SingletonInstance.InitScore();
     }
 
     // Update is called once per frame
@@ -177,7 +178,7 @@ public class Player : MonoBehaviour
                 Jump();
             }
             
-            if (Input.GetKeyDown(KeyCode.M))
+            if (Input.GetKeyDown(KeyCode.KeypadEnter))
             {
                 if (isMaximize)
                 {
