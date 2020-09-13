@@ -30,7 +30,7 @@ public class ResultScoreText : MonoBehaviour
             highScoreText.text = "新記録";
         }
         // スコア表示
-        totalScoreText.text = "転売合計" + score.ToString();
+        totalScoreText.text = "売却合計" + score.ToString() +"円";
     }
 
     // Update is called once per frame
