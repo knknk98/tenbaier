@@ -1,0 +1,66 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2147730194070639680
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2147730194070639682}
+  - component: {fileID: 2147730194070639681}
+  m_Layer: 0
+  m_Name: StagePatternGenerator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2147730194070639682
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2147730194070639680}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2147730194070639681
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2147730194070639680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4963461251ee1457681bef04c550fdbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stagePatternObjectList:
+  - {fileID: 8225138190845969390, guid: f11752c7ae8394aa39dbeeafba384c36, type: 3}
+  - {fileID: 3698390351867785422, guid: e8d2729c9b082443e85170f750cb3df1, type: 3}
+  - {fileID: 3698390351867785422, guid: bc1a9a14c01ff4194bc47021e84488d8, type: 3}
+  - {fileID: 3698390351867785422, guid: a2efa0b17840840bcadb4dde03564ca0, type: 3}
+  - {fileID: 8225138190845969390, guid: 6a7e6203722a9417486a4234b6c9aae8, type: 3}
+  - {fileID: 8225138190845969390, guid: f0aad095c74b14de39ff857e21f1388b, type: 3}
+  - {fileID: 8225138190845969390, guid: d6b5d9c69eeb44ea590980e5b3d6c943, type: 3}
+  - {fileID: 8225138190845969390, guid: 46edea9c6f6fa413d983fa5dd029d2a2, type: 3}
+  - {fileID: 8225138190845969390, guid: 396346dcec0464a4e81e0662fbed8f71, type: 3}
+  rightSideStagePatternObject: {fileID: 0}
+  backgroundObject: {fileID: 5663232148710905018, guid: a03fd5be1dcd54a49a018d3bcbb4f81f,
+    type: 3}
+  generateBackgroundPointX: 0
+  rightSideBackgroundObject: {fileID: 0}
+  stageSpeedAcceleration: -1e-10
+  stageSpeedMax: -0.5
+  initialStageSpeed: -0.05
+  isGameOver: 0
+  stagePatternMoveSpeed: 0
+  speedRate: 1

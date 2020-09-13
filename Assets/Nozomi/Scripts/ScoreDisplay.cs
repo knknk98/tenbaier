@@ -14,6 +14,7 @@ public class ScoreDisplay : MonoBehaviour
     private void Awake()
     {
         score = 0;
+        scoreText = GetComponent<Text>();
         scoreText.text = score.ToString("D" + scoreDigit);
     }
 
