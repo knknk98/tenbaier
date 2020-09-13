@@ -21,10 +21,10 @@ public class ResultItemInfo : MonoBehaviour
             {
                 if(i<6){
                     textl += item.name+"\n";
-                    pricel += item.price.ToString() +"円×"+item.count.ToString()+"\n";
+                    pricel += "￥" + item.price.ToString() +"×"+item.count.ToString()+"\n";
                 }else{
                     textr += item.name+"\n";
-                    pricer += item.price.ToString() +"円×"+item.count.ToString()+"\n";
+                    pricer += "￥" + item.price.ToString() +"×"+item.count.ToString()+"\n";
                 }
             }
             textL.text = textl;
