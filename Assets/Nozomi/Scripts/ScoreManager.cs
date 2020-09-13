@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
 public class ScoreManager : MonoBehaviour
 {
@@ -12,16 +13,19 @@ public class ScoreManager : MonoBehaviour
         public int count;
     }
     private Dictionary<int, ItemInfo> itemDictionary = new Dictionary<int, ItemInfo>();
-    
+
+    private int totalScore = 0;
+    private int highScore = 0;
+
     private static ScoreManager singletonInstance;
 
-    public static ScoreManager SinngletonInstance
+    public static ScoreManager SingletonInstance
     {
         get
         {
             if (singletonInstance == null)
             {
-                var obj = new GameObject("Scoremanager");
+                var obj = new GameObject("ScoreManager");
                 DontDestroyOnLoad(obj);
                 singletonInstance = obj.AddComponent<ScoreManager>();
             }
@@ -41,10 +45,30 @@ public class ScoreManager : MonoBehaviour
         var item = itemDictionary[itemID];
         item.count += itemCount;
         itemDictionary[itemID] = item;
+
+        totalScore += item.price;
+        PlayerPrefs.SetInt("Score", totalScore);
+        if (totalScore > highScore)
+        {
+            highScore = totalScore;
+            PlayerPrefs.SetInt("HighScore", highScore);
+        }
     }
 
-    public Dictionary<int, ItemInfo> GetItemCountDictionary()
+    public List<ItemInfo> GetItemList()
     {
-        return itemDictionary;
+        var itemList = itemDictionary.Values.OrderBy(v => v.price).ToList();
+        return itemList;
+    }
+
+    public void InitScore()
+    {
+        totalScore = 0;
+        highScore = 0;
+        if (PlayerPrefs.HasKey("HighScore"))
+        {
+            highScore = PlayerPrefs.GetInt("HighScore");
+        }
+
     }
 }
