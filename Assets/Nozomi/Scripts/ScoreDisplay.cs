@@ -23,4 +23,9 @@ public class ScoreDisplay : MonoBehaviour
         score += ItemScriptalbleObject.SingletonInstance.ItemDataList[itemId].price;
         scoreText.text = score.ToString("D" + scoreDigit);
     }
+
+    private void Display()
+    {
+        scoreText.text = "売却額 ￥ " + score.ToString("D" + scoreDigit);
+    }
 }

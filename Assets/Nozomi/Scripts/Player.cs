@@ -40,6 +40,7 @@ public class Player : MonoBehaviour
     private float jumpPower;
     private float recoverySpeed;
     private float speedRate;
+    private Vector3 cameraBasePos;
     private float sizeProgress;
 
     private int jumpCount;
@@ -119,7 +120,7 @@ public class Player : MonoBehaviour
             Camera.main.orthographicSize = minCameraSize + (maxCameraSize - minCameraSize) * sizeProgress;
             jumpPower = minJumpPower + (maxJumpPower - minJumpPower) * sizeProgress;
 
-            Camera.main.transform.position = Vector3.Lerp(minCameraPos, maxCameraPos, sizeProgress);
+            cameraBasePos = Vector3.Lerp(minCameraPos, maxCameraPos, sizeProgress);
         })).OnComplete(() => { isInChange = false;});
     }
     
@@ -158,7 +159,7 @@ public class Player : MonoBehaviour
         jumpPower = minJumpPower + (maxJumpPower - minJumpPower) * sizeProgress;
         Camera.main.orthographicSize = minCameraSize + (maxCameraSize - minCameraSize) * sizeProgress;
         rigidbody.gravityScale = minGravityScale + (maxGravityScale - minGravityScale) * sizeProgress;
-        Camera.main.transform.position = Vector3.Lerp(minCameraPos, maxCameraPos, sizeProgress);
+        cameraBasePos = Vector3.Lerp(minCameraPos, maxCameraPos, sizeProgress);
     }
 
     private void Start()
@@ -201,6 +202,7 @@ public class Player : MonoBehaviour
                 }
             }
 
+            //巨大化中に壁にぶつかったら縮む
             if (isMaximize && isInChange)
             {
                 if (TouchLayer("Ground", Vector2.up, 0.3f))
@@ -209,6 +211,14 @@ public class Player : MonoBehaviour
                 }
             }
             
+            //カメラ位置
+            var nextCameraPos = cameraBasePos;
+            if (transform.position.y > cameraBasePos.y)
+            {
+                nextCameraPos.y = transform.position.y;
+            }
+
+            Camera.main.transform.position = nextCameraPos;
 
             //画面外判定
             var viewportPos = Camera.main.WorldToViewportPoint(transform.position);
