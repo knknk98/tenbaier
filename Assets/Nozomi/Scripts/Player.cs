@@ -33,6 +33,10 @@ public class Player : MonoBehaviour
     [SerializeField] private float transitionTime;
     [SerializeField] private float initPosX = 0;
 
+    [SerializeField] private float maxShotPower;
+    [SerializeField] private float minShotPower;
+    [SerializeField] private float rotPower;
+
 
     private bool isAlive = true;
     private bool isMaximize = false;
@@ -40,7 +44,11 @@ public class Player : MonoBehaviour
     private float jumpPower;
     private float recoverySpeed;
     private float speedRate;
+
     private Vector3 cameraBasePos;
+
+    private float shotPower;
+
     private float sizeProgress;
 
     private int jumpCount;
@@ -119,6 +127,7 @@ public class Player : MonoBehaviour
             recoverySpeed = minRecoverySpeed + (maxRecoverySpeed - minRecoverySpeed) * sizeProgress;
             Camera.main.orthographicSize = minCameraSize + (maxCameraSize - minCameraSize) * sizeProgress;
             jumpPower = minJumpPower + (maxJumpPower - minJumpPower) * sizeProgress;
+            shotPower = minShotPower + (maxShotPower - minShotPower) * sizeProgress;
 
             cameraBasePos = Vector3.Lerp(minCameraPos, maxCameraPos, sizeProgress);
         })).OnComplete(() => { isInChange = false;});
@@ -126,6 +135,7 @@ public class Player : MonoBehaviour
     
     private void GameOver()
     {
+        Die(gameObject, new Vector2(-0.41f, 0.41f), shotPower, rotPower, false);
         SoundManager.SingletonInstance.PlaySE("gameover", false, 0.3f);
         gsab.SetSpeedRate(0);
         if (!isAlive) return;
@@ -144,6 +154,25 @@ public class Player : MonoBehaviour
         SceneManager.LoadScene("ResultScene");
     }
     
+    private void Die(GameObject target, Vector2 direction, float power, float torque, bool destroy = true)
+    {
+        var col = target.GetComponent<Collider2D>();
+        Destroy(col);
+        var rig = target.GetComponent<Rigidbody2D>();
+        if (!rig)
+        {
+            rig = target.AddComponent<Rigidbody2D>();
+        }
+
+        rig.constraints = RigidbodyConstraints2D.None;
+        rig.velocity = Vector2.zero;
+        rig.AddForce(power * direction, ForceMode2D.Impulse);
+        if (destroy)
+        {
+            DOVirtual.DelayedCall(2f, () => { Destroy(target); });
+        }
+        rig.AddTorque(torque,ForceMode2D.Impulse);
+    }
 
     private void Awake()
     {
@@ -159,7 +188,12 @@ public class Player : MonoBehaviour
         jumpPower = minJumpPower + (maxJumpPower - minJumpPower) * sizeProgress;
         Camera.main.orthographicSize = minCameraSize + (maxCameraSize - minCameraSize) * sizeProgress;
         rigidbody.gravityScale = minGravityScale + (maxGravityScale - minGravityScale) * sizeProgress;
+
         cameraBasePos = Vector3.Lerp(minCameraPos, maxCameraPos, sizeProgress);
+
+        shotPower = minShotPower + (maxShotPower - minJumpPower) * sizeProgress;
+        Camera.main.transform.position = Vector3.Lerp(minCameraPos, maxCameraPos, sizeProgress);
+
     }
 
     private void Start()
@@ -178,7 +212,8 @@ public class Player : MonoBehaviour
                 Jump();
             }
             
-            if (Input.GetKeyDown(KeyCode.M))
+
+            if (Input.GetKeyDown(KeyCode.Return))
             {
                 if (isMaximize)
                 {
@@ -226,7 +261,49 @@ public class Player : MonoBehaviour
             {
                 GameOver();
             }
+            
         }
     }
-    
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        string layerName = LayerMask.LayerToName(other.gameObject.layer);
+        if (layerName == "Trap")
+        {
+            SoundManager.SingletonInstance.PlaySE("damage", false, 0.3f);
+            GameOver();
+        }
+
+        switch (layerName)
+        {
+            case "Trap":
+                SoundManager.SingletonInstance.PlaySE("damage", false, 0.3f);
+                GameOver();
+                break;
+            
+            case "Clerk":
+                if (isMaximize)
+                {
+                    SoundManager.SingletonInstance.PlaySE("damage", false, 0.3f);
+                    Die(other.gameObject, new Vector2(0.5f,0.5f), minShotPower,-rotPower, true);
+                }
+                else
+                {
+                    SoundManager.SingletonInstance.PlaySE("damage", false, 0.3f);
+                    GameOver();
+                }
+
+                break;
+            
+            case "Grass":
+                if (isMaximize)
+                {
+                    Destroy(other.gameObject);
+                }
+
+                break;
+                
+        }
+  
+    }
 }

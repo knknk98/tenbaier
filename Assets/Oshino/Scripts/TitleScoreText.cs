@@ -15,7 +15,7 @@ public class TitleScoreText : MonoBehaviour
         // ハイスコア情報取得。情報がなければ0にする
         highScore = PlayerPrefs.GetInt(key,0);
         // ハイスコア表示
-        highScoreText.text = "HighScore:" + highScore.ToString();
+        highScoreText.text = "最高売却額：" + highScore.ToString();
     }
 
     // Update is called once per frame
