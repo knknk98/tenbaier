@@ -882,7 +882,7 @@ PrefabInstance:
     - target: {fileID: 2147730194070639681, guid: 87d22a4a3ae95460295d7c2d8de226ee,
         type: 3}
       propertyPath: stagePatternObjectList.Array.size
-      value: 12
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 2147730194070639681, guid: 87d22a4a3ae95460295d7c2d8de226ee,
         type: 3}
@@ -916,13 +916,13 @@ PrefabInstance:
         type: 3}
       propertyPath: stagePatternObjectList.Array.data[12]
       value: 
-      objectReference: {fileID: 8225138190845969390, guid: 46edea9c6f6fa413d983fa5dd029d2a2,
+      objectReference: {fileID: 8225138190845969390, guid: 76d9db099331b4aca947335db178fc96,
         type: 3}
     - target: {fileID: 2147730194070639681, guid: 87d22a4a3ae95460295d7c2d8de226ee,
         type: 3}
       propertyPath: stagePatternObjectList.Array.data[13]
       value: 
-      objectReference: {fileID: 8225138190845969390, guid: 46edea9c6f6fa413d983fa5dd029d2a2,
+      objectReference: {fileID: 8225138190845969390, guid: 6ca6edf14e7454a39807ee729849e2a1,
         type: 3}
     - target: {fileID: 2147730194070639682, guid: 87d22a4a3ae95460295d7c2d8de226ee,
         type: 3}
