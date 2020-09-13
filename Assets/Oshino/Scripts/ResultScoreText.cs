@@ -19,6 +19,7 @@ public class ResultScoreText : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        SoundManager.SingletonInstance.PlaySE("result",false,0.3f);
         // スコア情報取得
         highScore = PlayerPrefs.GetInt(highScoreKey,0);
         score = PlayerPrefs.GetInt(scoreKey,0);
