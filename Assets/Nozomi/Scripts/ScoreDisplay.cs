@@ -21,7 +21,5 @@ public class ScoreDisplay : MonoBehaviour
     {
         score += ItemScriptalbleObject.SingletonInstance.ItemDataList[itemId].price;
         scoreText.text = score.ToString("D" + scoreDigit);
-        //スコア記録
-        ScoreManager.SingletonInstance.AddItem(itemId, 1);
     }
 }
