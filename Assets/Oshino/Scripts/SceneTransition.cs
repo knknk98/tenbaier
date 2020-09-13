@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class SceneTransition : MonoBehaviour
 {
     public string DestinationScene;
-    public void ScreeTransition(){
+    public void Transition(){
         SceneManager.LoadScene(DestinationScene);
     }
 }

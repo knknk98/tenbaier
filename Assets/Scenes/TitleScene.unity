@@ -232,7 +232,7 @@ GameObject:
   - component: {fileID: 450303621}
   - component: {fileID: 450303620}
   m_Layer: 0
-  m_Name: "TEN\u500D\u30E4\u30FC\u30ED\u30B4"
+  m_Name: logo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -490,7 +490,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 818713832}
-        m_MethodName: ScreeTransition
+        m_MethodName: Transition
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -661,7 +661,7 @@ GameObject:
   - component: {fileID: 1413395457}
   - component: {fileID: 1413395456}
   m_Layer: 0
-  m_Name: "TEN\u500D\u30E4\u30FC\u30BF\u30A4\u30C8\u30EB\u30EA\u30B6\u30EB\u30C8\u80CC\u666F"
+  m_Name: background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -742,7 +742,7 @@ GameObject:
   - component: {fileID: 1461884001}
   - component: {fileID: 1461884000}
   m_Layer: 0
-  m_Name: "\u30BF\u30A4\u30C8\u30EB\u30D0\u30FC"
+  m_Name: titlebar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
