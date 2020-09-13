@@ -22,6 +22,7 @@ public class Item : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            SoundManager.SingletonInstance.PlaySE("itemget", false, 0.3f);
             scoreDisplay.AddScore(itemId);
             ScoreManager.SingletonInstance.AddItem(itemId, 1);
             Destroy(this.gameObject);
