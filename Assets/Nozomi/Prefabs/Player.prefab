@@ -118,7 +118,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gsab: {fileID: 0}
-  inputUI: {fileID: 8774759169431928440, guid: 244539b0edd844d8d8924ac82c853ed8, type: 3}
+  inputUI: {fileID: 0}
   gameOverText: {fileID: 7890105815159102423, guid: 9a88037db4f8c40fe9b6573a28bf4b0a,
     type: 3}
   maxJumpPower: 100
@@ -136,6 +136,9 @@ MonoBehaviour:
   maxScale: 10
   transitionTime: 2
   initPosX: 0
+  maxShotPower: 100
+  minShotPower: 10
+  rotPower: 30
 --- !u!58 &50538928501598461
 CircleCollider2D:
   m_ObjectHideFlags: 0

@@ -53,6 +53,9 @@ MonoBehaviour:
   - {fileID: 8225138190845969390, guid: d6b5d9c69eeb44ea590980e5b3d6c943, type: 3}
   - {fileID: 8225138190845969390, guid: 46edea9c6f6fa413d983fa5dd029d2a2, type: 3}
   - {fileID: 8225138190845969390, guid: 396346dcec0464a4e81e0662fbed8f71, type: 3}
+  - {fileID: 8225138190845969390, guid: 1c5c71dac076e495b93add13fadf989e, type: 3}
+  - {fileID: 8225138190845969390, guid: 02830f4bb5e234fe6a18f7f7f749ab16, type: 3}
+  - {fileID: 8225138190845969390, guid: c94a46410791d4d1bb46f2b0df393497, type: 3}
   rightSideStagePatternObject: {fileID: 0}
   backgroundObject: {fileID: 5663232148710905018, guid: a03fd5be1dcd54a49a018d3bcbb4f81f,
     type: 3}
