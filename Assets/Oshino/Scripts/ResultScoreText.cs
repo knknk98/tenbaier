@@ -8,7 +8,7 @@ public class ResultScoreText : MonoBehaviour
 {
     // スコア表示テキスト
     public Text highScoreText;
-    public Text scoreText;
+    public Text totalScoreText;
 
     //　スコア情報保存するための変数
     private int highScore;
@@ -27,11 +27,10 @@ public class ResultScoreText : MonoBehaviour
         if (score>highScore){
             highScore = score;
             PlayerPrefs.SetInt(highScoreKey, highScore);
+            highScoreText.text = "新記録";
         }
-
         // スコア表示
-        scoreText.text = "score:" + score.ToString();
-        highScoreText.text = "HighScore:" + highScore.ToString();
+        totalScoreText.text = "転売合計" + score.ToString();
     }
 
     // Update is called once per frame
