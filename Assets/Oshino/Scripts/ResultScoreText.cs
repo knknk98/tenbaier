@@ -13,21 +13,19 @@ public class ResultScoreText : MonoBehaviour
     //　スコア情報保存するための変数
     private int highScore;
     private int score;
-    private string highScoreKey = "HighScore";   //ハイスコアの保存先キー
-    private string scoreKey = "Score"; //スコアの保存キー
 
     // Start is called before the first frame update
     void Start()
     {
         SoundManager.SingletonInstance.PlaySE("result",false,0.3f);
         // スコア情報取得
-        highScore = PlayerPrefs.GetInt(highScoreKey,0);
-        score = PlayerPrefs.GetInt(scoreKey,0);
+        highScore = PlayerPrefs.GetInt("HighScore");
+        score = PlayerPrefs.GetInt("Score");
 
         // ハイスコア更新
         if (score>highScore){
             highScore = score;
-            PlayerPrefs.SetInt(highScoreKey, highScore);
+            PlayerPrefs.SetInt("HighScore", score);
             highScoreText.text = "新記録";
         }
         // スコア表示
