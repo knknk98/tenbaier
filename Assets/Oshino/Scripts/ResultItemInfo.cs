@@ -13,16 +13,24 @@ public class ResultItemInfo : MonoBehaviour
     {
             var itemDict = ScoreManager.SingletonInstance.GetItemList();
             int i=0;
+            string textl="";
+            string textr="";
+            string pricel="";
+            string pricer="";
             foreach (var item in itemDict)
             {
                 if(i<6){
-                    textL.text = item.name+"\n";
-                    priceL.text = item.price.ToString() +"円×"+item.count.ToString()+"\n";
+                    textl += item.name+"\n";
+                    pricel += item.price.ToString() +"円×"+item.count.ToString()+"\n";
                 }else{
-                    textR.text = item.name+"\n";
-                    priceR.text = item.price.ToString() +"円×"+item.count.ToString()+"\n";
+                    textr += item.name+"\n";
+                    pricer += item.price.ToString() +"円×"+item.count.ToString()+"\n";
                 }
             }
+            textL.text = textl;
+            textR.text = textr;
+            priceL.text = pricel;
+            priceR.text = pricer;
     }
 
     // Update is called once per frame
