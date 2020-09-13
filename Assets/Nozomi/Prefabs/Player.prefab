@@ -73,7 +73,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: b6e40e7a8e3ae4e9db9060fa2be10f6e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a077f07c627c447ce88573a025d26821, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -117,6 +117,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e686d5253a1b4534886f7b4937d057f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inputUI: {fileID: 0}
   gameOverText: {fileID: 7890105815159102423, guid: 9a88037db4f8c40fe9b6573a28bf4b0a,
     type: 3}
   maxJumpPower: 100
