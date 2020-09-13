@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6820447572665256567}
   - component: {fileID: 1739337651654724520}
   - component: {fileID: 5796230583859380844}
-  - component: {fileID: -5439631463266637863}
+  - component: {fileID: 50538928501598461}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -99,7 +99,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 5
   m_Material: {fileID: 6200000, guid: 70028953ee98d4423afe5a148e23391c, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -117,16 +117,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e686d5253a1b4534886f7b4937d057f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameOverText: {fileID: 7890105815159102423, guid: 9a88037db4f8c40fe9b6573a28bf4b0a,
+    type: 3}
   maxJumpPower: 100
-  minJumpPower: 10
-  maxCameraSize: 30
-  minCameraSize: 15
-  maxRecoverySpeed: 10
+  minJumpPower: 15
+  maxCameraSize: 15
+  minCameraSize: 5
+  maxRecoverySpeed: 6
   minRecoverySpeed: 2
+  maxGravityScale: 30
+  minGravityScale: 5
+  maxCameraPos: {x: 0, y: 0, z: -10}
+  minCameraPos: {x: 0, y: -10, z: -10}
   maxScale: 10
   transitionTime: 2
   initPosX: 0
---- !u!58 &-5439631463266637863
+--- !u!58 &50538928501598461
 CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -135,7 +141,7 @@ CircleCollider2D:
   m_GameObject: {fileID: 8376665162854277719}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 70028953ee98d4423afe5a148e23391c, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
