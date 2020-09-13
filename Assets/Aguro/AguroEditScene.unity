@@ -882,7 +882,7 @@ PrefabInstance:
     - target: {fileID: 2147730194070639681, guid: 87d22a4a3ae95460295d7c2d8de226ee,
         type: 3}
       propertyPath: stagePatternObjectList.Array.size
-      value: 14
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 2147730194070639681, guid: 87d22a4a3ae95460295d7c2d8de226ee,
         type: 3}
@@ -923,6 +923,42 @@ PrefabInstance:
       propertyPath: stagePatternObjectList.Array.data[13]
       value: 
       objectReference: {fileID: 8225138190845969390, guid: 6ca6edf14e7454a39807ee729849e2a1,
+        type: 3}
+    - target: {fileID: 2147730194070639681, guid: 87d22a4a3ae95460295d7c2d8de226ee,
+        type: 3}
+      propertyPath: stagePatternObjectList.Array.data[14]
+      value: 
+      objectReference: {fileID: 3698390351867785422, guid: 77f6cfb84e20c4dbc90a18b38f19d874,
+        type: 3}
+    - target: {fileID: 2147730194070639681, guid: 87d22a4a3ae95460295d7c2d8de226ee,
+        type: 3}
+      propertyPath: stagePatternObjectList.Array.data[15]
+      value: 
+      objectReference: {fileID: 3698390351867785422, guid: 57c574436b63640d79055c90a94e6aa6,
+        type: 3}
+    - target: {fileID: 2147730194070639681, guid: 87d22a4a3ae95460295d7c2d8de226ee,
+        type: 3}
+      propertyPath: stagePatternObjectList.Array.data[16]
+      value: 
+      objectReference: {fileID: 3698390351867785422, guid: 487caa4cba99744b8a07a1f6472aaeca,
+        type: 3}
+    - target: {fileID: 2147730194070639681, guid: 87d22a4a3ae95460295d7c2d8de226ee,
+        type: 3}
+      propertyPath: stagePatternObjectList.Array.data[17]
+      value: 
+      objectReference: {fileID: 3698390351867785422, guid: 7ee96498f31534cf4bd2db78b39850b7,
+        type: 3}
+    - target: {fileID: 2147730194070639681, guid: 87d22a4a3ae95460295d7c2d8de226ee,
+        type: 3}
+      propertyPath: stagePatternObjectList.Array.data[18]
+      value: 
+      objectReference: {fileID: 8225138190845969390, guid: 0bc9fddb88821407fb77bb547f9a5abe,
+        type: 3}
+    - target: {fileID: 2147730194070639681, guid: 87d22a4a3ae95460295d7c2d8de226ee,
+        type: 3}
+      propertyPath: stagePatternObjectList.Array.data[19]
+      value: 
+      objectReference: {fileID: 8225138190845969390, guid: 6f66544af4f7c439f91380e74818bef9,
         type: 3}
     - target: {fileID: 2147730194070639682, guid: 87d22a4a3ae95460295d7c2d8de226ee,
         type: 3}
