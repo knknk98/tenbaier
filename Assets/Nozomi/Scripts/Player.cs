@@ -36,6 +36,7 @@ public class Player : MonoBehaviour
 
     private bool isAlive = true;
     private bool isMaximize = false;
+    private bool isInChange = false;
     private float jumpPower;
     private float recoverySpeed;
     private float speedRate;
@@ -60,6 +61,7 @@ public class Player : MonoBehaviour
 
     private void Maximize()
     {
+        isInChange = true;
         ChangeSize(1);
         isMaximize = true;
         inputUI.Swap(isMaximize);
@@ -67,6 +69,7 @@ public class Player : MonoBehaviour
 
     private void Minimize()
     {
+        isInChange = true;
         ChangeSize(0);
         isMaximize = false;
         inputUI.Swap(isMaximize);
@@ -102,7 +105,7 @@ public class Player : MonoBehaviour
             jumpPower = minJumpPower + (maxJumpPower - minJumpPower) * sizeProgress;
 
             Camera.main.transform.position = Vector3.Lerp(minCameraPos, maxCameraPos, sizeProgress);
-        }));
+        })).OnComplete(() => { isInChange = false;});
     }
     
     private void GameOver()
@@ -171,6 +174,14 @@ public class Player : MonoBehaviour
                 if (initPosX - transform.position.x > 0)
                 {
                     transform.position += recoverySpeed * Time.deltaTime * Vector3.right;
+                }
+            }
+
+            if (isMaximize && isInChange)
+            {
+                if (TouchLayer("Ground", Vector2.up, 0.3f))
+                {
+                    Minimize();
                 }
             }
             

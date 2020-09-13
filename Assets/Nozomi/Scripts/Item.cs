@@ -2,7 +2,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Random = System.Random;
 
 [RequireComponent(typeof(Collider2D))]
 public class Item : MonoBehaviour
