@@ -65,6 +65,7 @@ public class ScoreManager : MonoBehaviour
     {
         totalScore = 0;
         highScore = 0;
+        PlayerPrefs.SetInt("Score",0);
         if (PlayerPrefs.HasKey("HighScore"))
         {
             highScore = PlayerPrefs.GetInt("HighScore");
