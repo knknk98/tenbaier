@@ -48,11 +48,13 @@ public class ScoreManager : MonoBehaviour
 
         totalScore += item.price;
         PlayerPrefs.SetInt("Score", totalScore);
+        /*
         if (totalScore > highScore)
         {
             highScore = totalScore;
             PlayerPrefs.SetInt("HighScore", highScore);
         }
+        */
     }
 
     public List<ItemInfo> GetItemList()
@@ -63,6 +65,7 @@ public class ScoreManager : MonoBehaviour
 
     public void InitScore()
     {
+        itemDictionary.Clear();
         totalScore = 0;
         highScore = 0;
         PlayerPrefs.SetInt("Score",0);
@@ -70,7 +73,6 @@ public class ScoreManager : MonoBehaviour
         {
             highScore = PlayerPrefs.GetInt("HighScore");
         }
-
     }
 
 }

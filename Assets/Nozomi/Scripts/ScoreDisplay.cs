@@ -15,13 +15,13 @@ public class ScoreDisplay : MonoBehaviour
     {
         score = 0;
         scoreText = GetComponent<Text>();
-        scoreText.text = score.ToString("D" + scoreDigit);
+        Display();
     }
 
     public void AddScore(int itemId)
     {
         score += ItemScriptalbleObject.SingletonInstance.ItemDataList[itemId].price;
-        scoreText.text = score.ToString("D" + scoreDigit);
+        Display();
     }
 
     private void Display()
