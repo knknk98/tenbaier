@@ -881,6 +881,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2147730194070639681, guid: 87d22a4a3ae95460295d7c2d8de226ee,
         type: 3}
+      propertyPath: stagePatternObjectList.Array.size
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 2147730194070639681, guid: 87d22a4a3ae95460295d7c2d8de226ee,
+        type: 3}
       propertyPath: rightSideStagePatternObject
       value: 
       objectReference: {fileID: 2003716345}
@@ -889,6 +894,36 @@ PrefabInstance:
       propertyPath: rightSideBackgroundObject
       value: 
       objectReference: {fileID: 74438086}
+    - target: {fileID: 2147730194070639681, guid: 87d22a4a3ae95460295d7c2d8de226ee,
+        type: 3}
+      propertyPath: stagePatternObjectList.Array.data[9]
+      value: 
+      objectReference: {fileID: 8225138190845969390, guid: 1c5c71dac076e495b93add13fadf989e,
+        type: 3}
+    - target: {fileID: 2147730194070639681, guid: 87d22a4a3ae95460295d7c2d8de226ee,
+        type: 3}
+      propertyPath: stagePatternObjectList.Array.data[10]
+      value: 
+      objectReference: {fileID: 8225138190845969390, guid: 02830f4bb5e234fe6a18f7f7f749ab16,
+        type: 3}
+    - target: {fileID: 2147730194070639681, guid: 87d22a4a3ae95460295d7c2d8de226ee,
+        type: 3}
+      propertyPath: stagePatternObjectList.Array.data[11]
+      value: 
+      objectReference: {fileID: 8225138190845969390, guid: c94a46410791d4d1bb46f2b0df393497,
+        type: 3}
+    - target: {fileID: 2147730194070639681, guid: 87d22a4a3ae95460295d7c2d8de226ee,
+        type: 3}
+      propertyPath: stagePatternObjectList.Array.data[12]
+      value: 
+      objectReference: {fileID: 8225138190845969390, guid: 46edea9c6f6fa413d983fa5dd029d2a2,
+        type: 3}
+    - target: {fileID: 2147730194070639681, guid: 87d22a4a3ae95460295d7c2d8de226ee,
+        type: 3}
+      propertyPath: stagePatternObjectList.Array.data[13]
+      value: 
+      objectReference: {fileID: 8225138190845969390, guid: 46edea9c6f6fa413d983fa5dd029d2a2,
+        type: 3}
     - target: {fileID: 2147730194070639682, guid: 87d22a4a3ae95460295d7c2d8de226ee,
         type: 3}
       propertyPath: m_LocalPosition.x
