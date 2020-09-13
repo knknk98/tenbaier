@@ -26,6 +26,7 @@ public class ResultItemInfo : MonoBehaviour
                     textr += item.name+"\n";
                     pricer += "￥" + item.price.ToString() +"×"+item.count.ToString()+"\n";
                 }
+                i++;
             }
             textL.text = textl;
             textR.text = textr;
