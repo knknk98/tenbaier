@@ -3,12 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-<<<<<<< HEAD
-  tags:
-  - "\u80CC\u666F"
-=======
   tags: []
->>>>>>> master
   layers:
   - Default
   - TransparentFX
@@ -18,11 +13,7 @@ TagManager:
   - UI
   - 
   - 
-<<<<<<< HEAD
-  - 
-=======
   - Ground
->>>>>>> master
   - 
   - 
   - 
