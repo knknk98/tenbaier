@@ -2,27 +2,151 @@
 <project version="4">
   <component name="ContentModelStore">
     <e p="$PROJECT_DIR$" t="IncludeRecursive">
+      <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
+      <e p="Assembly-CSharp-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
+        <e p="Aguro" t="Include">
+          <e p="Scripts" t="Include">
+            <e p="AppUtil.cs" t="Include" />
+            <e p="GenerateStageAndBackground.cs" t="Include" />
+            <e p="MoveBackground.cs" t="Include" />
+            <e p="MoveStagePattern.cs" t="Include" />
+            <e p="RegisterRankingButton.cs" t="Include" />
+          </e>
+        </e>
+        <e p="Editor" t="Include">
+          <e p="NCMBMenu.cs" t="Include" />
+          <e p="PreBuildAndroid.cs" t="Include" />
+          <e p="SimpleJSON.cs" t="Include" />
+          <e p="SimpleJSONBinary.cs" t="Include" />
+          <e p="SimpleJSONUnity.cs" t="Include" />
+          <e p="UpdateXcodeProject.cs" t="Include" />
+        </e>
+        <e p="naichilab" t="Include">
+          <e p="unity-simple-ranking" t="Include">
+            <e p="Sample" t="Include">
+              <e p="SampleSceneManager.cs" t="Include" />
+            </e>
+            <e p="Scripts" t="Include">
+              <e p="IScore.cs" t="Include" />
+              <e p="NcmbYieldableExtensions.cs" t="Include" />
+              <e p="NumberScore.cs" t="Include" />
+              <e p="RankingBoards.cs" t="Include" />
+              <e p="RankingInfo.cs" t="Include" />
+              <e p="RankingLoader.cs" t="Include" />
+              <e p="RankingNode.cs" t="Include" />
+              <e p="RankingSceneManager.cs" t="Include" />
+              <e p="ScoreOrder.cs" t="Include" />
+              <e p="ScoreType.cs" t="Include" />
+              <e p="TimeScore.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="NCMB" t="Include">
+          <e p="NCMBManager.cs" t="Include" />
+          <e p="NCMBSettings.cs" t="Include" />
+          <e p="Script" t="Include">
+            <e p="CommonConstant.cs" t="Include" />
+            <e p="ExtensionsClass.cs" t="Include" />
+            <e p="MimeTypeMap.cs" t="Include" />
+            <e p="MiniJSON.cs" t="Include" />
+            <e p="NamespaceDoc.cs" t="Include" />
+            <e p="NCMBACL.cs" t="Include" />
+            <e p="NCMBAddOperation.cs" t="Include" />
+            <e p="NCMBAddUniqueOperation.cs" t="Include" />
+            <e p="NCMBAnalytics.cs" t="Include" />
+            <e p="NCMBAppleAuthenManager.cs" t="Include" />
+            <e p="NCMBAppleParameters.cs" t="Include" />
+            <e p="NCMBCallback.cs" t="Include" />
+            <e p="NCMBClassNameAttribute.cs" t="Include" />
+            <e p="NCMBConnection.cs" t="Include" />
+            <e p="NCMBDebug.cs" t="Include" />
+            <e p="NCMBDeleteOperation.cs" t="Include" />
+            <e p="NCMBException.cs" t="Include" />
+            <e p="NCMBFacebookParameters.cs" t="Include" />
+            <e p="NCMBFieldOperation.cs" t="Include" />
+            <e p="NCMBFile.cs" t="Include" />
+            <e p="NCMBGeoPoint.cs" t="Include" />
+            <e p="NCMBIncrementOperation.cs" t="Include" />
+            <e p="NCMBInstallation.cs" t="Include" />
+            <e p="NCMBObject.cs" t="Include" />
+            <e p="NCMBPush.cs" t="Include" />
+            <e p="NCMBQuery.cs" t="Include" />
+            <e p="NCMBRelation.cs" t="Include" />
+            <e p="NCMBRelationOperation.cs" t="Include" />
+            <e p="NCMBRemoveOperation.cs" t="Include" />
+            <e p="NCMBRole.cs" t="Include" />
+            <e p="NCMBScript.cs" t="Include" />
+            <e p="NCMBSetOperation.cs" t="Include" />
+            <e p="NCMBTwitterParameters.cs" t="Include" />
+            <e p="NCMBUser.cs" t="Include" />
+            <e p="NCMBUtility.cs" t="Include" />
+            <e p="SimpleJSON.cs" t="Include" />
+            <e p="Task" t="Include">
+              <e p="NCMBObjectTaskExtension.cs" t="Include" />
+              <e p="NCMBPushTaskExtension.cs" t="Include" />
+              <e p="NcmbQueryTaskExtension.cs" t="Include" />
+              <e p="NCMBScriptTaskExtension.cs" t="Include" />
+              <e p="NCMBUserTaskExtension.cs" t="Include" />
+              <e p="NCMBUserTaskMethods.cs" t="Include" />
+            </e>
+          </e>
+        </e>
         <e p="Nozomi" t="Include">
-          <e p="Plugins" t="Include">
-            <e p="Demigiant" t="Include">
-              <e p="DOTween" t="Include">
-                <e p="Modules" t="Include">
-                  <e p="DOTweenModuleAudio.cs" t="Include" />
-                  <e p="DOTweenModulePhysics.cs" t="Include" />
-                  <e p="DOTweenModulePhysics2D.cs" t="Include" />
-                  <e p="DOTweenModuleSprite.cs" t="Include" />
-                  <e p="DOTweenModuleUI.cs" t="Include" />
-                  <e p="DOTweenModuleUnityVersion.cs" t="Include" />
-                  <e p="DOTweenModuleUtils.cs" t="Include" />
-                </e>
-                <e p="readme.txt" t="Include" />
+          <e p="Scripts" t="Include">
+            <e p="InputUI.cs" t="Include" />
+            <e p="Item.cs" t="Include" />
+            <e p="ItemScriptalbleObject.cs" t="Include" />
+            <e p="Player.cs" t="Include" />
+            <e p="ScoreDisplay.cs" t="Include" />
+            <e p="ScoreManager.cs" t="Include" />
+            <e p="SoundManager.cs" t="Include" />
+            <e p="Test.cs" t="Include" />
+          </e>
+        </e>
+        <e p="Oshino" t="Include">
+          <e p="Scripts" t="Include">
+            <e p="PlayBGM.cs" t="Include" />
+            <e p="ResultItemInfo.cs" t="Include" />
+            <e p="ResultScoreText.cs" t="Include" />
+            <e p="SceneTransition.cs" t="Include" />
+            <e p="TitleScoreText.cs" t="Include" />
+          </e>
+        </e>
+        <e p="Plugins" t="Include">
+          <e p="Android" t="Include">
+            <e p="AndroidManifest.xml" t="Include" />
+            <e p="res" t="Include">
+              <e p="values" t="Include">
+                <e p="version.xml" t="Include" />
               </e>
             </e>
           </e>
-          <e p="Scripts" t="Include">
-            <e p="Player.cs" t="Include" />
+          <e p="Demigiant" t="Include">
+            <e p="DOTween" t="Include">
+              <e p="Modules" t="Include">
+                <e p="DOTweenModuleAudio.cs" t="Include" />
+                <e p="DOTweenModulePhysics.cs" t="Include" />
+                <e p="DOTweenModulePhysics2D.cs" t="Include" />
+                <e p="DOTweenModuleSprite.cs" t="Include" />
+                <e p="DOTweenModuleUI.cs" t="Include" />
+                <e p="DOTweenModuleUnityVersion.cs" t="Include" />
+                <e p="DOTweenModuleUtils.cs" t="Include" />
+              </e>
+              <e p="readme.txt" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Scenes" t="Include">
+          <e p="Member" t="Include">
+            <e p="DisableButton.cs" t="Include" />
+            <e p="getCurrentUser.cs" t="Include" />
+            <e p="Loginsignin.cs" t="Include" />
+            <e p="Logout.cs" t="Include" />
+          </e>
+          <e p="QuickStartScene" t="Include">
+            <e p="QuickStart.cs" t="Include" />
           </e>
         </e>
       </e>
@@ -32,6 +156,6 @@
       <e p="Tenbaier.sln" t="IncludeFlat" />
     </e>
     <e p="$USER_HOME$/Library/Caches/JetBrains/Rider2020.2/extResources" t="IncludeRecursive" />
-    <e p="$USER_HOME$/Library/Caches/JetBrains/Rider2020.2/resharper-host/local/Transient/Rider/v202/SolutionCaches/_Tenbaier.-354667384.00" t="ExcludeRecursive" />
+    <e p="$USER_HOME$/Library/Caches/JetBrains/Rider2020.2/resharper-host/local/Transient/Rider/v202/SolutionCaches/_tenbaier.1026213608.00" t="ExcludeRecursive" />
   </component>
 </project>

@@ -1,7 +1,188 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="bbb5c171-c1f6-424e-bc0c-16afd92939ff" name="Default Changelist" comment="" />
+    <list default="true" id="bbb5c171-c1f6-424e-bc0c-16afd92939ff" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Tenbaier/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Tenbaier/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Tenbaier/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Tenbaier/.idea/indexLayout.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Tenbaier/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Tenbaier/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Tenbaier/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Tenbaier/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Aguro/AguroEditScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Aguro/AguroEditScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Aguro/Prefabs/StagePattern10ItemBonus.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Aguro/Prefabs/StagePattern10ItemBonus.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Aguro/Prefabs/StagePattern11ItemBonusMini.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Aguro/Prefabs/StagePattern11ItemBonusMini.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Aguro/Prefabs/StagePattern12GrassWall.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Aguro/Prefabs/StagePattern12GrassWall.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Aguro/Prefabs/StagePattern13GrassTrapTop.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Aguro/Prefabs/StagePattern13GrassTrapTop.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Aguro/Prefabs/StagePattern14GrassItem.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Aguro/Prefabs/StagePattern14GrassItem.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Aguro/Prefabs/StagePattern15TrapLeft.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Aguro/Prefabs/StagePattern15TrapLeft.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Aguro/Prefabs/StagePattern16ItemBonusMiniHard.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Aguro/Prefabs/StagePattern16ItemBonusMiniHard.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Aguro/Prefabs/StagePattern17TrapDown.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Aguro/Prefabs/StagePattern17TrapDown.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Aguro/Prefabs/StagePattern18ManyClerk.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Aguro/Prefabs/StagePattern18ManyClerk.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Aguro/Prefabs/StagePattern19GrassTrapBottom.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Aguro/Prefabs/StagePattern19GrassTrapBottom.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Aguro/Prefabs/StagePattern1Grid.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Aguro/Prefabs/StagePattern1Grid.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Aguro/Prefabs/StagePattern20ItemOne.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Aguro/Prefabs/StagePattern20ItemOne.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Aguro/Prefabs/StagePattern2Grid.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Aguro/Prefabs/StagePattern2Grid.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Aguro/Prefabs/StagePattern3Trap.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Aguro/Prefabs/StagePattern3Trap.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Aguro/Prefabs/StagePattern4Clerk.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Aguro/Prefabs/StagePattern4Clerk.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Aguro/Prefabs/StagePattern5Item.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Aguro/Prefabs/StagePattern5Item.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Aguro/Prefabs/StagePattern6StepUp.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Aguro/Prefabs/StagePattern6StepUp.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Aguro/Prefabs/StagePattern7StepUpHigh.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Aguro/Prefabs/StagePattern7StepUpHigh.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Aguro/Prefabs/StagePattern8ClerkItem.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Aguro/Prefabs/StagePattern8ClerkItem.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Aguro/Prefabs/StagePattern9TrapItem.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Aguro/Prefabs/StagePattern9TrapItem.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Aguro/Scripts/GenerateStageAndBackground.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Aguro/Scripts/GenerateStageAndBackground.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Aguro/Scripts/MoveBackground.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Aguro/Scripts/MoveBackground.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Aguro/Scripts/MoveStagePattern.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Aguro/Scripts/MoveStagePattern.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_0.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_0.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_1.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_10.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_10.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_100.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_100.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_101.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_101.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_102.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_102.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_103.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_103.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_104.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_104.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_105.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_105.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_106.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_106.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_107.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_107.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_108.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_108.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_109.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_109.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_11.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_11.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_110.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_110.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_111.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_111.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_112.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_112.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_113.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_113.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_114.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_114.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_115.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_115.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_116.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_116.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_117.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_117.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_118.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_118.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_119.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_119.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_12.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_12.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_120.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_120.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_121.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_121.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_122.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_122.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_123.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_123.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_124.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_124.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_125.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_125.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_126.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_126.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_127.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_127.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_13.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_13.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_14.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_14.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_15.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_15.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_16.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_16.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_17.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_17.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_18.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_18.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_19.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_19.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_2.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_2.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_20.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_20.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_21.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_21.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_22.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_22.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_23.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_23.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_24.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_24.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_25.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_25.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_26.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_26.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_27.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_27.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_28.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_28.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_29.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_29.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_3.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_3.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_30.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_30.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_31.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_31.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_32.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_32.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_33.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_33.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_34.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_34.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_35.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_35.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_36.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_36.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_37.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_37.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_38.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_38.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_39.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_39.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_4.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_4.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_40.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_40.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_41.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_41.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_42.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_42.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_43.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_43.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_44.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_44.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_45.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_45.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_46.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_46.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_47.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_47.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_48.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_48.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_49.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_49.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_5.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_5.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_50.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_50.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_51.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_51.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_52.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_52.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_53.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_53.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_54.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_54.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_55.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_55.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_56.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_56.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_57.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_57.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_58.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_58.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_59.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_59.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_6.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_6.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_60.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_60.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_61.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_61.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_62.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_62.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_63.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_63.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_64.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_64.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_65.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_65.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_66.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_66.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_67.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_67.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_68.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_68.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_69.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_69.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_7.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_7.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_70.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_70.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_71.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_71.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_72.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_72.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_73.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_73.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_74.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_74.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_75.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_75.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_76.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_76.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_77.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_77.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_78.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_78.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_79.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_79.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_8.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_8.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_80.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_80.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_81.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_81.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_82.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_82.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_83.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_83.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_84.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_84.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_85.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_85.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_86.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_86.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_87.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_87.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_88.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_88.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_89.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_89.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_9.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_9.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_90.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_90.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_91.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_91.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_92.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_92.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_93.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_93.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_94.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_94.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_95.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_95.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_96.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_96.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_97.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_97.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_98.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_98.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_99.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Aguro/tileset/tileset-sliced_99.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Nozomi/Scripts/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Nozomi/Scripts/Player.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Oshino/Prefabs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ResultScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/ResultScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -10,10 +191,19 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Aguro/Scripts/RegisterRankingButton.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$PROJECT_DIR$/Assets/Aguro/Scripts/MoveStagePattern.cs" />
+        <option value="$PROJECT_DIR$/Assets/Aguro/Scripts/MoveBackground.cs" />
+        <option value="$PROJECT_DIR$/Assets/Aguro/Scripts/GenerateStageAndBackground.cs" />
+        <option value="$PROJECT_DIR$/Assets/Aguro/Scripts/TouchController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Aguro/Scripts/AppUtil.cs" />
         <option value="$PROJECT_DIR$/Assets/Nozomi/Scripts/Player.cs" />
+        <option value="$PROJECT_DIR$/Assets/Aguro/Scripts/RegisterRankingButton.cs" />
       </list>
     </option>
   </component>
@@ -26,6 +216,13 @@
     <property name="Discover.Launch.Via.Unity" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
@@ -56,6 +253,7 @@
       <option name="presentableId" value="Default" />
       <updated>1599888635896</updated>
       <workItem from="1599888641818" duration="5949000" />
+      <workItem from="1602411050595" duration="7980000" />
     </task>
     <servers />
   </component>
@@ -64,6 +262,17 @@
   </component>
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
