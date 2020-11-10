@@ -57,7 +57,7 @@ public class Player : MonoBehaviour
 
     private int jumpCount;
     private const int MaxJumpCount = 3;
-    
+
     //ジャンプしたあとに地面に着地した際にジャンプカウントをリセットする
     private bool isJumpCountReseted = true;
 
@@ -269,8 +269,10 @@ public class Player : MonoBehaviour
         if (isGameOver)
         {
             //gameOverTextSimple.transform.position = (gameOverTextSimple.transform.position + new Vector3(0f, Screen.height/2f, 0f));
-            gameOverTextSimple.transform.localPosition = Vector3.Lerp(gameOverTextSimple.transform.localPosition, new Vector3(0, 0, 0), 0.03f);
+            gameOverTextSimple.transform.localPosition = Vector3.Lerp(gameOverTextSimple.transform.localPosition,
+                new Vector3(0, 0, 0), 0.03f);
         }
+
         if (!isJumpCountReseted && TouchLayer("Ground", Vector2.down))
         {
             isJumpCountReseted = true;
@@ -288,19 +290,36 @@ public class Player : MonoBehaviour
             TouchInfo info = AppUtil.GetTouch();
             bool isJumpButton = false;
             bool isChangeSizeButton = false;
-            if (info == TouchInfo.Began)
+            // if (info == TouchInfo.Began)
+            // {
+            //     Vector3 vector3 = AppUtil.GetTouchPosition();
+            //     Debug.Log(vector3);
+            //     if (vector3.x < Screen.width / 2f)
+            //     {
+            //         isJumpButton = true;
+            //     }
+            //     else
+            //     {
+            //         isChangeSizeButton = true;
+            //     }
+            // }
+
+            if (Input.touchCount > 0)
             {
-                Vector3 vector3 = AppUtil.GetTouchPosition();
-                Debug.Log(vector3);
-                if (vector3.x < Screen.width/2f)
+                Touch touch = Input.GetTouch(Input.touchCount-1);
+                if (touch.phase == TouchPhase.Began)
                 {
-                    isJumpButton = true;
-                }
-                else
-                {
-                    isChangeSizeButton = true;
+                    if (touch.position.x < Screen.width / 2f)
+                    {
+                        isJumpButton = true;
+                    }
+                    else
+                    {
+                        isChangeSizeButton = true;
+                    }
                 }
             }
+
             if (Input.GetKeyDown(KeyCode.Space) || isJumpButton)
             {
                 Jump();
@@ -323,14 +342,13 @@ public class Player : MonoBehaviour
                 var velocity = rigidbody.velocity;
                 velocity.x = 0;
                 rigidbody.velocity = velocity;
-
                 if (initPosX - transform.position.x > 0)
                 {
                     transform.position += recoverySpeed * Time.deltaTime * Vector3.right;
                 }
             }
 
-            //巨大化中に壁にぶつかったら縮む
+//巨大化中に壁にぶつかったら縮む
             if (isMaximize && isInChange)
             {
                 if (TouchLayer("Ground", Vector2.up, 0.3f))
@@ -339,7 +357,7 @@ public class Player : MonoBehaviour
                 }
             }
 
-            //カメラ位置
+//カメラ位置
             var nextCameraPos = cameraBasePos;
             if (transform.position.y > cameraBasePos.y)
             {
@@ -348,7 +366,7 @@ public class Player : MonoBehaviour
 
             Camera.main.transform.position = nextCameraPos;
 
-            //画面外判定
+//画面外判定
             var viewportPos = Camera.main.WorldToViewportPoint(transform.position);
             if (!cameraRect.Contains(viewportPos))
             {
@@ -404,6 +422,7 @@ public class Player : MonoBehaviour
             }
         }
     }
+
     private void OnCollisionStay2D(Collision2D other)
     {
         string layerName = LayerMask.LayerToName(other.gameObject.layer);

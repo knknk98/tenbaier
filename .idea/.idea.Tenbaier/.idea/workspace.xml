@@ -20,28 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bbb5c171-c1f6-424e-bc0c-16afd92939ff" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Tenbaier/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Tenbaier/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Tenbaier/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Tenbaier/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Aguro/AguroEditScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Aguro/AguroEditScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Aguro/Prefabs/StagePattern13GrassTrapTop.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Aguro/Prefabs/StagePattern13GrassTrapTop.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Aguro/Prefabs/StagePattern6StepUp.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Aguro/Prefabs/StagePattern6StepUp.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Aguro/Prefabs/StagePattern8ClerkItem.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Aguro/Prefabs/StagePattern8ClerkItem.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Aguro/Scripts/RegisterRankingButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Aguro/Scripts/RegisterRankingButton.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Nozomi/Scripts/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Nozomi/Scripts/Player.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Nozomi/Scripts/ScoreDisplay.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Nozomi/Scripts/ScoreDisplay.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Oshino/Scripts/ResultItemInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Oshino/Scripts/ResultItemInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Android/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/iOS/NCMBAppControllerPushAdditions.mm.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/iOS/NCMBAppControllerPushAdditions.mm.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/iOS/NCMBAppleAuth.h.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/iOS/NCMBAppleAuth.h.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/iOS/NCMBAppleAuth.m.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/iOS/NCMBAppleAuth.m.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/iOS/NCMBCloseImageView.h.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/iOS/NCMBCloseImageView.h.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/iOS/NCMBCloseImageView.m.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/iOS/NCMBCloseImageView.m.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/iOS/NCMBRichPushView.h.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/iOS/NCMBRichPushView.h.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/iOS/NCMBRichPushView.m.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/iOS/NCMBRichPushView.m.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ResultScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/ResultScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/TitleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/TitleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,8 +47,8 @@
         <option value="$PROJECT_DIR$/Assets/Oshino/Scripts/ResultItemInfo.cs" />
         <option value="$PROJECT_DIR$/Assets/Aguro/Scripts/RegisterRankingButton.cs" />
         <option value="$PROJECT_DIR$/Assets/Plugins/Android/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/Assets/Nozomi/Scripts/Player.cs" />
         <option value="$PROJECT_DIR$/Assets/Nozomi/Scripts/ScoreDisplay.cs" />
+        <option value="$PROJECT_DIR$/Assets/Nozomi/Scripts/Player.cs" />
       </list>
     </option>
   </component>
@@ -123,7 +103,7 @@
       <workItem from="1603440334604" duration="3276000" />
       <workItem from="1604595081642" duration="558000" />
       <workItem from="1604977358347" duration="558000" />
-      <workItem from="1604980609768" duration="3896000" />
+      <workItem from="1604980609768" duration="6517000" />
     </task>
     <servers />
   </component>
