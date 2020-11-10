@@ -6,7 +6,7 @@ public class RegisterRankingButton : MonoBehaviour
 {
     public void RegisterRankingButtonClicked()
     {
-        int score = PlayerPrefs.GetInt("Score");
-        naichilab.RankingLoader.Instance.SendScoreAndShowRanking (score);
+        int highScore = PlayerPrefs.GetInt("HighScore");
+        naichilab.RankingLoader.Instance.SendScoreAndShowRanking (highScore);
     }
 }

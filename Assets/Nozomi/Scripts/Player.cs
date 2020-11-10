@@ -7,6 +7,8 @@ using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
+    private bool isGameOver;
+    [SerializeField] private GameObject gameOverTextSimple;
     [SerializeField] private GenerateStageAndBackground gsab;
     [SerializeField] private InputUI inputUI;
     [SerializeField] private GameObject gameOverText;
@@ -180,6 +182,7 @@ public class Player : MonoBehaviour
 
     private void GameOver()
     {
+        isGameOver = true;
         /*
         var itemList = ScoreManager.SingletonInstance.GetItemList();
         foreach (var item in itemList)
@@ -202,7 +205,7 @@ public class Player : MonoBehaviour
         }
 
         isAlive = false;
-        Instantiate(gameOverText);
+        //Instantiate(gameOverText);
         Invoke("GoToResultScene", 3f);
     }
 
@@ -255,13 +258,19 @@ public class Player : MonoBehaviour
 
     private void Start()
     {
-        SoundManager.SingletonInstance.PlayBGM("playBGM", false, 0.3f);
+        SoundManager.SingletonInstance.PlayBGM("playBGM", true, 0.3f);
         ScoreManager.SingletonInstance.InitScore();
+        Camera.main.orthographicSize = minCameraSize;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (isGameOver)
+        {
+            //gameOverTextSimple.transform.position = (gameOverTextSimple.transform.position + new Vector3(0f, Screen.height/2f, 0f));
+            gameOverTextSimple.transform.localPosition = Vector3.Lerp(gameOverTextSimple.transform.localPosition, new Vector3(0, 0, 0), 0.03f);
+        }
         if (!isJumpCountReseted && TouchLayer("Ground", Vector2.down))
         {
             isJumpCountReseted = true;
@@ -283,7 +292,7 @@ public class Player : MonoBehaviour
             {
                 Vector3 vector3 = AppUtil.GetTouchPosition();
                 Debug.Log(vector3);
-                if (vector3.x < 640)
+                if (vector3.x < Screen.width/2f)
                 {
                     isJumpButton = true;
                 }
@@ -384,6 +393,18 @@ public class Player : MonoBehaviour
     }
 
     private void OnCollisionEnter2D(Collision2D other)
+    {
+        string layerName = LayerMask.LayerToName(other.gameObject.layer);
+        if (layerName == "Grass")
+        {
+            if (isAbleToBreakGrass)
+            {
+                SoundManager.SingletonInstance.PlaySE("grass", false, 0.3f);
+                Destroy(other.gameObject);
+            }
+        }
+    }
+    private void OnCollisionStay2D(Collision2D other)
     {
         string layerName = LayerMask.LayerToName(other.gameObject.layer);
         if (layerName == "Grass")

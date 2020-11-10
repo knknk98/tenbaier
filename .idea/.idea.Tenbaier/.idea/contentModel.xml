@@ -9,9 +9,11 @@
         <e p="Aguro" t="Include">
           <e p="Scripts" t="Include">
             <e p="AppUtil.cs" t="Include" />
+            <e p="CameraStableAspect.cs" t="Include" />
             <e p="GenerateStageAndBackground.cs" t="Include" />
             <e p="MoveBackground.cs" t="Include" />
             <e p="MoveStagePattern.cs" t="Include" />
+            <e p="RectScalerWithViewport.cs" t="Include" />
             <e p="RegisterRankingButton.cs" t="Include" />
           </e>
         </e>

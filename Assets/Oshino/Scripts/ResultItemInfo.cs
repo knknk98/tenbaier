@@ -19,7 +19,7 @@ public class ResultItemInfo : MonoBehaviour
             string pricer="";
             foreach (var item in itemDict)
             {
-                if(i<6){
+                if(i<5){
                     textl += item.name+"\n";
                     pricel += "￥" + item.price.ToString() +"×"+item.count.ToString()+"\n";
                 }else{
