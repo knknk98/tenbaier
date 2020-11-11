@@ -1,7 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="bbb5c171-c1f6-424e-bc0c-16afd92939ff" name="Default Changelist" comment="" />
+    <list default="true" id="bbb5c171-c1f6-424e-bc0c-16afd92939ff" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Tenbaier/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Tenbaier/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Nozomi/Scripts/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Nozomi/Scripts/Player.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -10,9 +31,23 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Aguro/Scripts/RegisterRankingButton.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Aguro/Scripts/RectScalerWithViewport.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$PROJECT_DIR$/Assets/Aguro/Scripts/MoveStagePattern.cs" />
+        <option value="$PROJECT_DIR$/Assets/Aguro/Scripts/MoveBackground.cs" />
+        <option value="$PROJECT_DIR$/Assets/Aguro/Scripts/GenerateStageAndBackground.cs" />
+        <option value="$PROJECT_DIR$/Assets/Aguro/Scripts/TouchController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Aguro/Scripts/AppUtil.cs" />
+        <option value="$PROJECT_DIR$/Assets/Aguro/Scripts/RectScalerWithViewport.cs" />
+        <option value="$PROJECT_DIR$/Assets/Oshino/Scripts/ResultItemInfo.cs" />
+        <option value="$PROJECT_DIR$/Assets/Aguro/Scripts/RegisterRankingButton.cs" />
+        <option value="$PROJECT_DIR$/Assets/Plugins/Android/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/Assets/Nozomi/Scripts/ScoreDisplay.cs" />
         <option value="$PROJECT_DIR$/Assets/Nozomi/Scripts/Player.cs" />
       </list>
     </option>
@@ -26,6 +61,13 @@
     <property name="Discover.Launch.Via.Unity" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
@@ -56,6 +98,12 @@
       <option name="presentableId" value="Default" />
       <updated>1599888635896</updated>
       <workItem from="1599888641818" duration="5949000" />
+      <workItem from="1602411050595" duration="7980000" />
+      <workItem from="1602846928017" duration="2943000" />
+      <workItem from="1603440334604" duration="3276000" />
+      <workItem from="1604595081642" duration="558000" />
+      <workItem from="1604977358347" duration="558000" />
+      <workItem from="1604980609768" duration="6517000" />
     </task>
     <servers />
   </component>
@@ -64,7 +112,25 @@
   </component>
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="228" y="182" width="785" height="490" key="find.popup" timestamp="1604595730356">
+      <screen x="0" y="23" width="1680" height="962" />
+    </state>
+    <state x="228" y="182" width="785" height="490" key="find.popup/1680.273.1280.777/-1288.160.1288.923/0.23.1680.962@0.23.1680.962" timestamp="1604595730356" />
   </component>
 </project>

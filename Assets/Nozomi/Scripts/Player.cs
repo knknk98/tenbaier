@@ -7,19 +7,21 @@ using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
+    private bool isGameOver;
+    [SerializeField] private GameObject gameOverTextSimple;
     [SerializeField] private GenerateStageAndBackground gsab;
     [SerializeField] private InputUI inputUI;
     [SerializeField] private GameObject gameOverText;
-    
+
     [SerializeField] private float maxJumpPower;
     [SerializeField] private float minJumpPower;
-    
+
     [SerializeField] private float maxCameraSize;
     [SerializeField] private float minCameraSize;
-    
+
     [SerializeField] private float maxRecoverySpeed;
     [SerializeField] private float minRecoverySpeed;
-    
+
     [SerializeField] private float maxGravityScale;
     [SerializeField] private float minGravityScale;
 
@@ -28,7 +30,7 @@ public class Player : MonoBehaviour
 
     [SerializeField] private float maxSpeedRate;
     [SerializeField] private float minSpeedRate;
-    
+
     [SerializeField] private float maxScale = 10f;
     [SerializeField] private float transitionTime;
     [SerializeField] private float initPosX = 0;
@@ -39,7 +41,8 @@ public class Player : MonoBehaviour
 
 
     private bool isAlive = true;
-    private bool isMax = false;
+    private bool isAbleToBeatClerk = false;
+    private bool isAbleToBreakGrass = false;
     private bool isMaximize = false;
     private bool isInChange = false;
     private float jumpPower;
@@ -53,11 +56,13 @@ public class Player : MonoBehaviour
     private float sizeProgress;
 
     private int jumpCount;
-    private const int MaxJumpCount = 2;
-    
-    
+    private const int MaxJumpCount = 3;
+
+    //ジャンプしたあとに地面に着地した際にジャンプカウントをリセットする
+    private bool isJumpCountReseted = true;
+
     //画面外判定について
-    private Rect cameraRect = new Rect(-0.1f,-0.1f,1.1f,2f);
+    private Rect cameraRect = new Rect(-0.1f, -0.1f, 1.1f, 2f);
 
     private Sequence seq;
 
@@ -66,14 +71,19 @@ public class Player : MonoBehaviour
 
     private void Jump()
     {
-        if(TouchLayer("Ground", Vector2.down))
+        if (TouchLayer("Ground", Vector2.down))
         {
             jumpCount = MaxJumpCount;
         }
 
-        if (TouchLayer("Grass", Vector2.down) && !isMax)
+        if (TouchLayer("Grass", Vector2.down) && !isAbleToBreakGrass)
         {
             jumpCount = MaxJumpCount;
+        }
+
+        if (jumpCount < MaxJumpCount)
+        {
+            isJumpCountReseted = false;
         }
 
         if (jumpCount > 0)
@@ -109,7 +119,8 @@ public class Player : MonoBehaviour
     {
         int layerNo = LayerMask.NameToLayer(layerName);
         int layerMask = 1 << layerNo;
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, direction, transform.localScale.x * 0.5f + margin, layerMask);
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, direction, transform.localScale.x * 0.5f + margin,
+            layerMask);
         if (hit.collider)
         {
             return true;
@@ -117,28 +128,45 @@ public class Player : MonoBehaviour
 
         return false;
     }
+
     private void ChangeSize(float target)
     {
         if (seq != null)
         {
             seq.Kill();
         }
+
         seq = DOTween.Sequence().Append(DOVirtual.Float(sizeProgress, target, transitionTime, value =>
         {
             if (target > 0.5f)
             {
                 if (value > 0.5f)
                 {
-                    isMax = true;
+                    isAbleToBreakGrass = true;
+                }
+
+                if (value > 0.25f)
+                {
+                    isAbleToBeatClerk = true;
                 }
             }
             else
             {
                 if (value < 0.5f)
                 {
-                    isMax = false;
+                    isAbleToBreakGrass = false;
+                }
+
+                if (value < 0.25f)
+                {
+                    isAbleToBeatClerk = false;
+                }
+                else
+                {
+                    isAbleToBeatClerk = true;
                 }
             }
+
             sizeProgress = value;
             speedRate = minSpeedRate + (maxSpeedRate - minSpeedRate) * sizeProgress;
             gsab.SetSpeedRate(speedRate);
@@ -149,11 +177,12 @@ public class Player : MonoBehaviour
             jumpPower = minJumpPower + (maxJumpPower - minJumpPower) * sizeProgress;
             shotPower = minShotPower + (maxShotPower - minShotPower) * sizeProgress;
             cameraBasePos = Vector3.Lerp(minCameraPos, maxCameraPos, sizeProgress);
-        })).OnComplete(() => { isInChange = false;});
+        })).OnComplete(() => { isInChange = false; });
     }
-    
+
     private void GameOver()
     {
+        isGameOver = true;
         /*
         var itemList = ScoreManager.SingletonInstance.GetItemList();
         foreach (var item in itemList)
@@ -163,7 +192,7 @@ public class Player : MonoBehaviour
             Debug.Log("count:" + item.count);
         }
         */
-        
+
         Die(gameObject, new Vector2(-0.41f, 0.41f), shotPower, rotPower, false);
         SoundManager.SingletonInstance.StopBGM();
         SoundManager.SingletonInstance.PlaySE("gameover", false, 0.3f);
@@ -174,8 +203,9 @@ public class Player : MonoBehaviour
         {
             seq.Kill();
         }
+
         isAlive = false;
-        Instantiate(gameOverText);
+        //Instantiate(gameOverText);
         Invoke("GoToResultScene", 3f);
     }
 
@@ -183,7 +213,7 @@ public class Player : MonoBehaviour
     {
         SceneManager.LoadScene("ResultScene");
     }
-    
+
     private void Die(GameObject target, Vector2 direction, float power, float torque, bool destroy = true)
     {
         var col = target.GetComponent<Collider2D>();
@@ -201,7 +231,8 @@ public class Player : MonoBehaviour
         {
             DOVirtual.DelayedCall(2f, () => { Destroy(target); });
         }
-        rig.AddTorque(torque,ForceMode2D.Impulse);
+
+        rig.AddTorque(torque, ForceMode2D.Impulse);
     }
 
     private void Awake()
@@ -210,7 +241,7 @@ public class Player : MonoBehaviour
         renderer = GetComponent<Renderer>();
 
         jumpCount = MaxJumpCount;
-        
+
         sizeProgress = isMaximize ? 1 : 0;
         speedRate = minSpeedRate + (maxSpeedRate - minSpeedRate) * sizeProgress;
         gsab.SetSpeedRate(speedRate);
@@ -223,27 +254,78 @@ public class Player : MonoBehaviour
 
         shotPower = minShotPower + (maxShotPower - minJumpPower) * sizeProgress;
         Camera.main.transform.position = Vector3.Lerp(minCameraPos, maxCameraPos, sizeProgress);
-
     }
 
     private void Start()
     {
-        SoundManager.SingletonInstance.PlayBGM("playBGM", false, 0.3f);
+        SoundManager.SingletonInstance.PlayBGM("playBGM", true, 0.3f);
         ScoreManager.SingletonInstance.InitScore();
+        Camera.main.orthographicSize = minCameraSize;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (isGameOver)
+        {
+            //gameOverTextSimple.transform.position = (gameOverTextSimple.transform.position + new Vector3(0f, Screen.height/2f, 0f));
+            gameOverTextSimple.transform.localPosition = Vector3.Lerp(gameOverTextSimple.transform.localPosition,
+                new Vector3(0, 0, 0), 0.03f);
+        }
+
+        if (!isJumpCountReseted && TouchLayer("Ground", Vector2.down))
+        {
+            isJumpCountReseted = true;
+            jumpCount = MaxJumpCount;
+        }
+
+        if (!isJumpCountReseted && TouchLayer("Grass", Vector2.down) && !isAbleToBreakGrass)
+        {
+            isJumpCountReseted = true;
+            jumpCount = MaxJumpCount;
+        }
+
         if (isAlive)
         {
-            
-            if (Input.GetKeyDown(KeyCode.Space))
+            TouchInfo info = AppUtil.GetTouch();
+            bool isJumpButton = false;
+            bool isChangeSizeButton = false;
+            // if (info == TouchInfo.Began)
+            // {
+            //     Vector3 vector3 = AppUtil.GetTouchPosition();
+            //     Debug.Log(vector3);
+            //     if (vector3.x < Screen.width / 2f)
+            //     {
+            //         isJumpButton = true;
+            //     }
+            //     else
+            //     {
+            //         isChangeSizeButton = true;
+            //     }
+            // }
+
+            if (Input.touchCount > 0)
+            {
+                Touch touch = Input.GetTouch(Input.touchCount-1);
+                if (touch.phase == TouchPhase.Began)
+                {
+                    if (touch.position.x < Screen.width / 2f)
+                    {
+                        isJumpButton = true;
+                    }
+                    else
+                    {
+                        isChangeSizeButton = true;
+                    }
+                }
+            }
+
+            if (Input.GetKeyDown(KeyCode.Space) || isJumpButton)
             {
                 Jump();
             }
-            
-            if (Input.GetKeyDown(KeyCode.Return))
+
+            if (Input.GetKeyDown(KeyCode.Return) || isChangeSizeButton)
             {
                 if (isMaximize)
                 {
@@ -260,14 +342,13 @@ public class Player : MonoBehaviour
                 var velocity = rigidbody.velocity;
                 velocity.x = 0;
                 rigidbody.velocity = velocity;
-
                 if (initPosX - transform.position.x > 0)
                 {
                     transform.position += recoverySpeed * Time.deltaTime * Vector3.right;
                 }
             }
 
-            //巨大化中に壁にぶつかったら縮む
+//巨大化中に壁にぶつかったら縮む
             if (isMaximize && isInChange)
             {
                 if (TouchLayer("Ground", Vector2.up, 0.3f))
@@ -275,8 +356,8 @@ public class Player : MonoBehaviour
                     Minimize();
                 }
             }
-            
-            //カメラ位置
+
+//カメラ位置
             var nextCameraPos = cameraBasePos;
             if (transform.position.y > cameraBasePos.y)
             {
@@ -285,13 +366,12 @@ public class Player : MonoBehaviour
 
             Camera.main.transform.position = nextCameraPos;
 
-            //画面外判定
+//画面外判定
             var viewportPos = Camera.main.WorldToViewportPoint(transform.position);
             if (!cameraRect.Contains(viewportPos))
             {
                 GameOver();
             }
-            
         }
     }
 
@@ -310,12 +390,12 @@ public class Player : MonoBehaviour
                 SoundManager.SingletonInstance.PlaySE("damage", false, 0.3f);
                 GameOver();
                 break;
-            
+
             case "Clerk":
-                if (isMax)
+                if (isAbleToBeatClerk)
                 {
                     SoundManager.SingletonInstance.PlaySE("damage", false, 0.3f);
-                    Die(other.gameObject, new Vector2(0.5f,0.5f), minShotPower,-rotPower, true);
+                    Die(other.gameObject, new Vector2(0.5f, 0.5f), minShotPower, -rotPower, true);
                 }
                 else
                 {
@@ -324,12 +404,10 @@ public class Player : MonoBehaviour
                 }
 
                 break;
-            
+
             default:
                 break;
-
         }
-  
     }
 
     private void OnCollisionEnter2D(Collision2D other)
@@ -337,7 +415,20 @@ public class Player : MonoBehaviour
         string layerName = LayerMask.LayerToName(other.gameObject.layer);
         if (layerName == "Grass")
         {
-            if (isMax)
+            if (isAbleToBreakGrass)
+            {
+                SoundManager.SingletonInstance.PlaySE("grass", false, 0.3f);
+                Destroy(other.gameObject);
+            }
+        }
+    }
+
+    private void OnCollisionStay2D(Collision2D other)
+    {
+        string layerName = LayerMask.LayerToName(other.gameObject.layer);
+        if (layerName == "Grass")
+        {
+            if (isAbleToBreakGrass)
             {
                 SoundManager.SingletonInstance.PlaySE("grass", false, 0.3f);
                 Destroy(other.gameObject);

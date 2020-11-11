@@ -52,11 +52,11 @@ public class GenerateStageAndBackground : MonoBehaviour
         }
         if (stagePatternMoveSpeed>=stageSpeedMax)
         {
-            stagePatternMoveSpeed += stageSpeedAcceleration;
+            stagePatternMoveSpeed += stageSpeedAcceleration * Time.deltaTime;
         }
 
         //ステージパターンの繋ぎ目の隙間防止
-        float offset = stagePatternMoveSpeed * speedRate;
+        float offset = stagePatternMoveSpeed * speedRate * Time.deltaTime;
 
         if (rightSideStagePatternObject.transform.position.x<generateStagePointX - offset)
         {

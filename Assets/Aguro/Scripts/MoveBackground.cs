@@ -18,7 +18,7 @@ public class MoveBackground : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float moveX = generateStageAndBackground.stagePatternMoveSpeed * generateStageAndBackground.speedRate;
+        float moveX = generateStageAndBackground.stagePatternMoveSpeed * generateStageAndBackground.speedRate * Time.deltaTime;
         transform.Translate(moveX/4f, 0, 0);
         if (transform.position.x < destroyBackgroundPointX)
         {
