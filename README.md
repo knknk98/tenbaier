@@ -47,7 +47,7 @@
   </tr>
   <tr>
     <th>使用技術</th>
-    <td>Unity / C++</td>
+    <td>Unity / C#</td>
   </tr>
 </table>
 
